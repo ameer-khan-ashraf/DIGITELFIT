@@ -37,6 +37,7 @@
                         <option value="store">Store</option>
                         <option value="production">Production</option>
                         <option value="IT">IT</option>
+                        <option value="purchase">Purchase</option>
                     </select>
                 </div>
 

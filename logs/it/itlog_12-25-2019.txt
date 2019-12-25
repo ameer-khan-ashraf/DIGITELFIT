@@ -1,2 +1,14 @@
 bachmanhas logged in at08:07:45
 -----------------------------------------------------------------------
+bachmanhas logged in at09:04:39
+-----------------------------------------------------------------------
+bachman created a new user storeuser at 09:05:46
+Values username= storeuser email= store@elfitarabia.com department= store
+-----------------------------------------------------------------------
+bachman created a new user purchaseuser at 09:06:20
+Values username= purchaseuser email= purchase@elfitarabia.com department= purchase
+-----------------------------------------------------------------------
+bachmanhas logged out at09:06:23
+-----------------------------------------------------------------------
+bachmanhas logged in at01:41:52
+-----------------------------------------------------------------------

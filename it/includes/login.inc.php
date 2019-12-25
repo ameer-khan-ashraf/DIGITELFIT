@@ -85,6 +85,18 @@ if(isset ($_POST['login_submit'])) {
                     header('Location: ../../production/index.php');
                     exit();
                     }
+                    elseif ($row['deptname']=="purchase")
+                    {
+                    $_SESSION['username'] = $user_login;
+                    $filename='purchaselog_'.date('m-d-Y').'.txt';
+                    $filepath="../../logs/purchase/$filename";
+                    $myfile=fopen($filepath,'a');
+                    $log= $_SESSION['username'].'has logged in at'.date("h:i:s").PHP_EOL.
+                    '-----------------------------------------------------------------------'.PHP_EOL;
+                    fwrite($myfile, $log);
+                    header('Location: ../../purchase/index.php');
+                    exit();
+                    }
                 }
                 else{
                     $_SESSION['status'] = 'Email id / Password is Invalid';
