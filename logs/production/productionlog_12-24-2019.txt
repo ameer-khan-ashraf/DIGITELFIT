@@ -1,0 +1,24 @@
+middleditchhas logged out at09:42:05
+-----------------------------------------------------------------------
+middleditchhas logged in at10:40:53
+-----------------------------------------------------------------------
+middleditchhas logged out at10:42:44
+-----------------------------------------------------------------------
+administrator updated sales order approval at 10:55:03
+Orderno:  date placed:  date due  Priority  Status  Progress %
+-----------------------------------------------------------------------
+middleditchhas logged in at10:58:13
+-----------------------------------------------------------------------
+middleditch updated sales order approval at 10:58:54
+Orderno:  date placed:  date due  Priority  Status  Progress %
+-----------------------------------------------------------------------
+middleditch updated sales order approval at 11:00:49
+Orderno:  date placed:  date due  Priority  Status  Progress %
+-----------------------------------------------------------------------
+middleditchhas logged in at01:09:26
+-----------------------------------------------------------------------
+middleditch updated sales order progress at 01:09:45
+Orderno:  date placed:  date due  Priority  Status  Progress 60%
+-----------------------------------------------------------------------
+middleditchhas logged out at01:09:57
+-----------------------------------------------------------------------

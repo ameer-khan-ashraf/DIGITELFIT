@@ -1,0 +1,26 @@
+middleditchhas logged in at01:13:37
+-----------------------------------------------------------------------
+middleditch deleted rental trailer equipment at 01:13:44
+Values ID: 4 Machine type: A Load:  Status: Site Client: PENTA Remarks Abu Dhabi%
+-----------------------------------------------------------------------
+middleditch updated rental trailer status at 01:13:50
+Machine type:  Load Capacity:  Status: Repair
+-----------------------------------------------------------------------
+middleditch updated rental winch status at 01:13:57
+Machine type:  Load Capacity:  Status: Site
+-----------------------------------------------------------------------
+middleditch deleted rental winch equipment at 01:14:01
+Values ID: 1 Machine type: A Load:  Status: Available Client: NA Remarks Falcon%
+-----------------------------------------------------------------------
+middleditch deleted rental winch equipment at 01:14:11
+Values ID: 1 Machine type: A Load:  Status: Available Client: NA Remarks Falcon%
+-----------------------------------------------------------------------
+middleditch deleted rental winch equipment at 01:14:32
+Values ID: 1 Machine type: A Load:  Status: Available Client: NA Remarks Falcon%
+-----------------------------------------------------------------------
+middleditch deleted rental winch equipment at 01:15:58
+Values ID: 1 Machine type: A Load:  Status: Available Client: NA Remarks Falcon%
+-----------------------------------------------------------------------
+middleditch updated sales order progress & status at 01:20:13
+Values Orderno:  date placed:  date due  Priority  Status STARTED Progress 40%
+-----------------------------------------------------------------------

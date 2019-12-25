@@ -1,0 +1,19 @@
+Bachmanhas logged in at10:17:28
+-----------------------------------------------------------------------
+Bachman Updated user Bachman at 10:17:43
+Changed Values username= Bachman email= it@elfitarabia.com department= production
+-----------------------------------------------------------------------
+Bachman Updated user Bachman at 10:18:46
+Changed Values username= Bachman email= it@elfitarabia.com department= IT
+-----------------------------------------------------------------------
+Bachmanhas logged in at10:22:22
+-----------------------------------------------------------------------
+Bachman created a new user administrator at 10:25:41
+Values username= administrator email= gm@elfitarabia.com department= admin
+-----------------------------------------------------------------------
+Bachmanhas logged out at10:25:56
+-----------------------------------------------------------------------
+Bachmanhas logged in at01:07:46
+-----------------------------------------------------------------------
+Bachmanhas logged out at01:08:13
+-----------------------------------------------------------------------

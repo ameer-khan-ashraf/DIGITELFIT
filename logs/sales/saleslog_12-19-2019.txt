@@ -1,0 +1,19 @@
+Bachman2 logged out at 10:07:24
+-----------------------------------------------------------------------
+middleditch updated sales order progress & status at 01:16:12
+Values Orderno:  date placed:  date due  Priority  Status STARTED Progress 0.90%
+-----------------------------------------------------------------------
+Bachman2has logged in at01:22:33
+-----------------------------------------------------------------------
+Bachman2 downloaded sales order copy at 01:22:41
+Orderno:  date placed:  date due  Priority  Status  Progress 0%
+-----------------------------------------------------------------------
+ created sales order at 01:23:16
+Values Orderno: EA-SO-19-811 date placed: 2019/12/19 date due 2019-12-27 Priority high
+-----------------------------------------------------------------------
+Bachman2 downloaded sales order copy at 01:25:14
+Orderno: EA-SO-19-810 date placed: 2019-11-21 date due 2019-11-22 Priority medium Status STARTED Progress 40%
+-----------------------------------------------------------------------
+Bachman2 deleted sales order at 01:27:23
+Values Orderno:  date placed:  date due  Priority  Status  Progress 0%
+-----------------------------------------------------------------------
