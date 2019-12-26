@@ -1,0 +1,8 @@
+storeuserhas logged in at12:35:04
+-----------------------------------------------------------------------
+storeuser created International material request at 12:35:56
+Department: salesUpload date: 4PM4 date due 2019-12-17 Product code 8809 Product description New  Keyboard Product Remarks Product must have usb connection
+-----------------------------------------------------------------------
+storeuser created International material request at 12:39:28
+Department: productionUpload date: 2019/12/26 date due 2019-12-28 Product code 3445 Product description Wrench Product Remarks Product must be size 10
+-----------------------------------------------------------------------

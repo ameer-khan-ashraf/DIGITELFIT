@@ -34,13 +34,13 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Sales Orders</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Material Request</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">
                         <?php
-                        $query = "SELECT COUNT(*) FROM purchase AND purchaseint AS pno;";
+                        $query = "SELECT (SELECT COUNT(*) FROM purchaseint ) + (SELECT COUNT(*) FROM purchase) AS total_rows";
                         $query_run = mysqli_query($conn,$query);
-                        mysqli_fetch_assoc($query_run);
-                        echo '<p>Total Orders: '.$row['pno'].'</p>';
+                        $row = mysqli_fetch_assoc($query_run);
+                        echo '<p>Total Orders: '.$row['total_rows'].'</p>';
                         ?>
                       </div>
                     </div>

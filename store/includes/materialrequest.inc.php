@@ -79,7 +79,7 @@ elseif(isset($_POST['imr-submit']))
     $pcode = $_POST['pcode'];
     $pdesc = $_POST['pdesc'];
     $remarks = $_POST['remarks'];
-    $udate = date(Y/m/d);
+    $udate = date("Y/m/d");
     $ddate =  $_POST['ddate'];
     
     if (empty($dept)){
