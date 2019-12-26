@@ -113,7 +113,7 @@
   </div>
 
   <div class="row">
-    <div class="col-xl-8 col-md-12 mb-4">
+    <div class="col-xl-6 col-md-12 mb-4">
       <div class="card shadow mb-4">
         <div class="card-header py-3">
           <h6 class="m-2 font-weight-bold text-primary">Order List</h6>
@@ -142,14 +142,14 @@
                         {
                             ?>
               <tr>
-                <td><?php echo $row['ID'];?></td>
-                <td><?php echo $row['orderid'];?></td>
-                <td><?php echo $row['dateplaced'];?></td>
-                <td><?php echo $row['datedue'];?></td>
-                <td><?php echo $row['priority'];?></td>
-                <td>
-                  <a class="btn btn-primary" href="includes/viewso.inc.php?id=<?php echo $row['ID'];?>">Download</a>
-                </td>
+              <td><?php echo $row['ID'];?></td>
+              <td><?php echo $row['orderid'];?></td>
+              <td><?php echo $row['dateplaced'];?></td>
+              <td><?php echo $row['datedue'];?></td>
+              <td><?php echo $row['priority'];?></td>
+              <td>
+                <a class="btn btn-primary" href="includes/viewso.inc.php?id=<?php echo $row['ID'];?>">Download</a>
+              </td>
               </tr>
               <?php
 
@@ -165,21 +165,169 @@
         </div>
       </div>
     </div>
+    <div class="col-xl-6">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-2 font-weight-bold text-primary">Sales Order Progress</h6>
+                </div>
+                <div class="card-body table-wrapper-scroll-y" style="height:40vh;">
+                  <canvas id="mycanvas" >
+                  </canvas>
+                </div>
+              </div>
+            </div>
   </div>
   <div class="row">
-    <div class="col-xl-8">
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-          <h6 class="m-2 font-weight-bold text-primary">Sales Order Progress</h6>
+  <div class="col-xl-6 col-md-12 mb-4">
+            <div class="card shadow mb-4">
+        <div class="card-header py-3">   
+            <h6 class="m-2 font-weight-bold text-primary">Rental Trailers</h6>
         </div>
-        <div class="card-body table-wrapper-scroll-y" style="height:40vh;">
-          <canvas id="mycanvas" >
-          </canvas>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:50vh;">
+            <?php
+            if(isset($_SESSION['success']) && $_SESSION['success'] !='')
+            {
+                echo '<h2>'.$_SESSION['success'].'</h2>';
+                unset($_SESSION['success']);
+            }
+            if (isset($_SESSION['status']) && $_SESSION['status'] !='') 
+            {
+                echo '<h2 class="bg-info">'.$_SESSION['status'].'</h2>';
+                unset($_SESSION['status']);
+            }
+            ?>
+            <?php
+            $query = "SELECT * FROM trailrent";
+            $query_run = mysqli_query($conn,$query)
+            ?>
+            <table class="table table-striped ">
+                <thead>
+                    <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Machine Type</th>
+                    <th scope="col">Ton</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Client</th>
+                    <th scope="col">Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if(mysqli_num_rows($query_run) > 0)
+                    {
+                        while($row = mysqli_fetch_assoc($query_run))
+                        {
+                            ?>
+                    <tr>
+                    <td><?php echo $row['mID'];?></td>
+                    <td><?php echo $row['MachType'];?></td>
+                    <td><?php echo $row['ton'];?></td>
+                    <td><?php echo $row['status'];?></td>
+                    <td><?php echo $row['Client'];?></td>
+                    <td><?php echo $row['Remarks'];?></td>
+                    </tr>
+                    <?php
 
+                        }
+                    }
+                    else {
+                        echo "No Record Found";
+                        }
+                    ?>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+            </div>  
+            <div class="col-xl-6">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-2 font-weight-bold text-primary">Trailer Rent</h6>
+                </div>
+                <div class="card-body table-wrapper-scroll-y" style="height:50vh;">
+                  <canvas id="trailerpie" >
+                  </canvas>
+                </div>
+              </div>
+            </div>
+  </div>
+  <div class="row">
+                        
+                        <div class="col-xl-6 col-md-12 mb-4">
+                                <div class="card shadow mb-4">
+                            <div class="card-header py-3">   
+                                <h6 class="m-2 font-weight-bold text-primary">Rental Winch Machine</h6>
+                            </div>
+                            <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:50vh;">
+                                <?php
+                                if(isset($_SESSION['success']) && $_SESSION['success'] !='')
+                                {
+                                    echo '<h2>'.$_SESSION['success'].'</h2>';
+                                    unset($_SESSION['success']);
+                                }
+                                if (isset($_SESSION['status']) && $_SESSION['status'] !='') 
+                                {
+                                    echo '<h2 class="bg-info">'.$_SESSION['status'].'</h2>';
+                                    unset($_SESSION['status']);
+                                }
+                                ?>
+                                <?php
+                                $query = "SELECT * FROM winchrent";
+                                $query_run = mysqli_query($conn,$query)
+                                ?>
+                                <table class="table table-striped ">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">S.No</th>
+                                        <th scope="col">Machine Type</th>
+                                        <th scope="col">Ton</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Client</th>
+                                        <th scope="col">Remarks</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        if(mysqli_num_rows($query_run) > 0)
+                                        {
+                                            while($row = mysqli_fetch_assoc($query_run))
+                                            {
+                                                ?>
+                                        <tr>
+                                        <td><?php echo $row['mID'];?></td>
+                                        <td><?php echo $row['MachType'];?></td>
+                                        <td><?php echo $row['ton'];?></td>
+                                        <td><?php echo $row['status'];?></td>
+                                        <td><?php echo $row['Client'];?></td>
+                                        <td><?php echo $row['Remarks'];?></td>
+                                        </tr>
+                                        <?php
+                    
+                                            }
+                                        }
+                                        else {
+                                            echo "No Record Found";
+                                            }
+                                        ?>
+                                    </tbody>
+                                </table>
+                    
+                            </div>
+                        </div>
+                                </div>
+                                <div class="col-xl-6">
+                                  <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                      <h6 class="m-2 font-weight-bold text-primary">Winch Rent</h6>
+                                    </div>
+                                    <div class="card-body table-wrapper-scroll-y" style="height:50vh;">
+                                      <canvas id="winchpie" >
+                                      </canvas>
+                                    </div>
+                                  </div>
+                                </div>  
+                      </div>
 </div>
 <!-- /.container-fluid -->
 

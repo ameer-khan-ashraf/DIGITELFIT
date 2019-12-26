@@ -10,7 +10,7 @@ if(isset($_POST['update-btn']))
     $filename='productionlog_'.date('m-d-Y').'.txt';
     $filepath="../../logs/production/$filename";
     $myfile=fopen($filepath,'a');
-    $query0 = "SELECT * FROM users where idUsers='$id'";
+    $query0 = "SELECT * FROM salesorder where idUsers='$id'";
     $query_run0 = mysqli_query($conn, $query0);
     $row = mysqli_fetch_assoc($query_run0);
     $orderno = $row['orderid'];

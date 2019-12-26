@@ -215,9 +215,9 @@
                     <th scope="col">Dept</th>
                     <th scope="col">Product code</th>
                     <th scope="col">Product description</th>
-                    <th scope="col">Expected date</th>
                     <th scope="col">Status</th>
-                    <th style="width: 30%" scope="col">Remarks</th>
+                    <th style="width: 20%" scope="col">Remarks</th>
+                    <th scope="col">Expected date</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -233,15 +233,20 @@
                     <td><?php echo $row['dept'];?></td>
                     <td><?php echo $row['pcode'];?></td>
                     <td><?php echo $row['pdesc'];?></td>
-                    <form action="includes/updateprog.inc.php?id=<?php echo $row['ID'];?>" method="POST">
-                    <td>
-                        <div class="form-group">
-                        <label>Date Due</label>
-                        <input type="date" name="ddate" class="form-control" placeholder="Deadline" required="required">
-                    </div>
                     <td><?php echo $row['mstatus'];?></td>
                     <td><?php echo $row['remarks'];?></td>
+                    <form action="includes/materialrequpdate.inc.php?id=<?php echo $row['id'];?>" method="POST">
+                    <td>
+                        <div class="form-group">
+                        <input type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" name="ddate" class="form-control" placeholder="<?php echo $row['ddate']?>" required="required">
+                      </div>
+                    </td>
+                    <td>
+                    <button type="submit" name="update-mrdate" class="btn btn-primary">Update</button>
+                    </td>
+                    </form>
                     </tr>
+                    
                     <?php
 
                         }

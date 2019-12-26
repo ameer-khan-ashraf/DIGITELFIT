@@ -6,3 +6,5 @@ Department: salesUpload date: 4PM4 date due 2019-12-17 Product code 8809 Product
 storeuser created International material request at 12:39:28
 Department: productionUpload date: 2019/12/26 date due 2019-12-28 Product code 3445 Product description Wrench Product Remarks Product must be size 10
 -----------------------------------------------------------------------
+storeuserhas logged in at01:52:39
+-----------------------------------------------------------------------

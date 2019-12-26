@@ -1,2 +1,19 @@
 purchaseuserhas logged in at11:18:00
 -----------------------------------------------------------------------
+purchaseuserhas logged in at01:54:03
+-----------------------------------------------------------------------
+purchaseuser Updated Material Request Date at 01:56:40
+Material Request: 4 department:  Upload date  Expected date  Product code  Product description  Status  Remarks 
+-----------------------------------------------------------------------
+purchaseuser Updated Material Request Date at 01:57:28
+Material Request: 4 department:  Upload date  Expected date  Product code  Product description  Status  Remarks 
+-----------------------------------------------------------------------
+purchaseuser Updated Material Request Date at 01:59:00
+Material Request: 4 department:  Upload date  Expected date  Product code  Product description  Status  Remarks 
+-----------------------------------------------------------------------
+purchaseuser Updated Material Request Date at 02:08:47
+Material Request: 4 department: production Upload date 2019-12-26 Expected date 2019-12-28 Product code 3445 Product description Wrench Status Pending Approval Remarks Product must be size 10
+-----------------------------------------------------------------------
+purchaseuser Updated Material Request Date at 02:08:56
+Material Request: 4 department: production Upload date 2019-12-26 Expected date 2019-12-27 Product code 3445 Product description Wrench Status Pending Approval Remarks Product must be size 10
+-----------------------------------------------------------------------
