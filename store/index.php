@@ -8,8 +8,8 @@
         <div class="modal fade" id="lmrmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New Material Request</h5>
+            <div class="modal-header bg-gradient-success">
+              <h5 class="modal-title text-light" id="exampleModalLabel">New Material Request</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -18,16 +18,30 @@
                 <div class="modal-body">
 
                 <div class="form-group">
+                        <label>Requested Date</label>
+                        <input type="date" name="rdate" class="form-control" placeholder="Deadline" required="required">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Uploaded Date</label>
+                        <input type="date" name="udate" class="form-control" placeholder="Deadline" required="required">
+                    </div>
+
+                      <div class="form-group">
                         <label>Dept</label>
                         <select name="dept" class="form-control">
                             <option value="sales">Sales</option>
                             <option value="production">Production</option>
                             <option value="r&d">R&D</option>
-                            <option value="it">IT</option>
                             <option value="maintenance">Maintenance</option>
                         </select>
                     </div>
 
+                    <div class="form-group">
+                        <label>Reference</label>
+                        <input type="text" name="reference" class="form-control" placeholder="Enter Product Code" required="required">
+
+                    </div>
                     <div class="form-group">
                         <label>Product Code</label>
                         <input type="text" name="pcode" class="form-control" placeholder="Enter Product Code" required="required">
@@ -46,14 +60,29 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Units</label>
+                        <input type="text" name="units" class="form-control" placeholder="Enter units" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label>Required Quantity</label>
+                        <input type="text" name="rqty" class="form-control" placeholder="Enter required quantity">
+                    </div>
+                    <div class="form-group">
+                        <label>Available Quantity</label>
+                        <input type="text" name="rqty" class="form-control" placeholder="Enter available quantity">
+                    </div>
+                    <div class="form-group">
+                        <label>Purpose</label>
+                        <input type="text" name="purpose" class="form-control" placeholder="Enter purpose">
+                    </div>
+                    <div class="form-group">
                         <label>Remarks</label>
-                        <input type="text" name="remarks" class="form-control" placeholder="Enter Product Code" required="required">
-
+                        <input type="text" name="remarks" class="form-control" placeholder="Enter remarks" required="required">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" name="lmr-submit" class="btn btn-primary">Save</button>
+                    <button type="submit" name="lmr-submit" class="btn btn-warning text-dark">Save</button>
                 </div>
             </form>
           </div>
@@ -64,16 +93,25 @@
       <div class="modal fade" id="imrmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New Material Request</h5>
+            <div class="modal-header bg-gradient-danger">
+              <h5 class="modal-title text-light" id="exampleModalLabel">New Material Request</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <form action="includes/materialrequest.inc.php" enctype="multipart/form-data" method="post">
                 <div class="modal-body">
+                    <div class="form-group">
+                        <label>Requested Date</label>
+                        <input type="date" name="rdate" class="form-control" placeholder="Deadline" required="required">
+                    </div>
 
-                <div class="form-group">
+                    <div class="form-group">
+                        <label>Uploaded Date</label>
+                        <input type="date" name="udate" class="form-control" placeholder="Deadline" required="required">
+                    </div>
+
+                      <div class="form-group">
                         <label>Dept</label>
                         <select name="dept" class="form-control">
                             <option value="sales">Sales</option>
@@ -83,6 +121,11 @@
                         </select>
                     </div>
 
+                    <div class="form-group">
+                        <label>Reference</label>
+                        <input type="text" name="reference" class="form-control" placeholder="Enter Product Code" required="required">
+
+                    </div>
                     <div class="form-group">
                         <label>Product Code</label>
                         <input type="text" name="pcode" class="form-control" placeholder="Enter Product Code" required="required">
@@ -101,14 +144,30 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Units</label>
+                        <input type="text" name="unit" class="form-control" placeholder="Enter units" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label>Required Quantity</label>
+                        <input type="text" name="rqty" class="form-control" placeholder="Enter required quantity">
+                    </div>
+                    <div class="form-group">
+                        <label>Available Quantity</label>
+                        <input type="text" name="rqty" class="form-control" placeholder="Enter available quantity">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Purpose</label>
+                        <input type="text" name="purpose" class="form-control" placeholder="Enter purpose">
+                    </div>
+                    <div class="form-group">
                         <label>Remarks</label>
-                        <input type="text" name="remarks" class="form-control" placeholder="Enter Product Code" required="required">
-
+                        <input type="text" name="remarks" class="form-control" placeholder="Enter Remarks" >
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" name="imr-submit" class="btn btn-primary">Save</button>
+                    <button type="submit" name="imr-submit" class="btn btn-warning text-dark">Save</button>
                 </div>
             </form>
           </div>
@@ -225,9 +284,9 @@
           <div class="row">
             <div class="col-xl-12 col-md-12 mb-4">
             <div class="card shadow mb-4">
-        <div class="card-header py-3"> 
-            <h6 class="m-2 font-weight-bold text-primary">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#lmrmodal">
+        <div class="card-header bg-gradient-success py-3"> 
+            <h6 class="m-2 font-weight-bold text-light">
+            <button type="button" class="btn btn-warning text-dark" data-toggle="modal" data-target="#lmrmodal">
             Create New Request
             </button>  
             Local Material Request</h6>
@@ -249,17 +308,25 @@
             $query = "SELECT * FROM purchase";
             $query_run = mysqli_query($conn,$query)
             ?>
-            <table class="table table-striped ">
+            <table class="table table-bordered table-striped ">
                 <thead>
-                    <tr>
+                <tr>
                     <th scope="col">S.No</th>
-                    <th scope="col">Upload Date</th>
-                    <th scope="col">Dept</th>
+                    <th style="min-width:120px;" scope="col">Required Date</th>
+                    <th style="min-width:120px;" scope="col">Uploaded Date</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Reference</th>
                     <th scope="col">Product code</th>
-                    <th scope="col">Product description</th>
-                    <th scope="col">Expected date</th>
-                    <th scope="col">Status</th>
-                    <th style="width: 30%" scope="col">Remarks</th>
+                    <th style="min-width:160px;" scope="col">Product description</th>
+                    <th style="min-width:120px;" scope="col">Expected date</th>
+                    <th style="min-width:120px;" scope="col">Status</th>
+                    <th scope="col">Units</th>                    
+                    <th scope="col">Req Qty</th>
+                    <th scope="col">Avl Qty</th>
+                    <th scope="col">Pur Qty</th>
+                    <th scope="col">Purpose</th>
+                    <th style="min-width:160px;" scope="col">Remarks</th>
+                    
                     </tr>
                 </thead>
                 <tbody>
@@ -271,12 +338,19 @@
                             ?>
                     <tr>
                     <td><?php echo $row['id'];?></td>
+                    <td><?php echo $row['rdate'];?></td>
                     <td><?php echo $row['udate'];?></td>
                     <td><?php echo $row['dept'];?></td>
+                    <td><?php echo $row['reference'];?></td>
                     <td><?php echo $row['pcode'];?></td>
                     <td><?php echo $row['pdesc'];?></td>
                     <td><?php echo $row['ddate'];?></td>
                     <td><?php echo $row['mstatus'];?></td>
+                    <td><?php echo $row['units'];?></td>
+                    <td><?php echo $row['rqty'];?></td>
+                    <td><?php echo $row['aqty'];?></td>
+                    <td><?php echo $row['pqty'];?></td>
+                    <td><?php echo $row['purpose'];?></td>
                     <td><?php echo $row['remarks'];?></td>
                     </tr>
                     <?php
@@ -298,9 +372,9 @@
                         
     <div class="col-xl-12 col-md-12 mb-4">
             <div class="card shadow mb-4">
-        <div class="card-header py-3">   
-            <h6 class="m-2 font-weight-bold text-primary">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#imrmodal">
+        <div class="card-header bg-gradient-danger py-3">   
+            <h6 class="m-2 font-weight-bold text-light">
+            <button type="button" class="btn btn-warning text-dark" data-toggle="modal" data-target="#imrmodal">
             Create New Request
             </button>  
               International Material Request</h6>
@@ -322,17 +396,24 @@
             $query = "SELECT * FROM purchaseint";
             $query_run = mysqli_query($conn,$query)
             ?>
-            <table class="table table-striped ">
+            <table class="table table-bordered table-striped ">
                 <thead>
                     <tr>
                     <th scope="col">S.No</th>
-                    <th scope="col">Upload Date</th>
-                    <th scope="col">Dept</th>
+                    <th style="min-width:120px;" scope="col">Required Date</th>
+                    <th style="min-width:120px;" scope="col">Uploaded Date</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Reference</th>
                     <th scope="col">Product code</th>
-                    <th scope="col">Product description</th>
-                    <th scope="col">Expected date</th>
-                    <th scope="col">Status</th>
-                    <th style="width: 30%" scope="col">Remarks</th>
+                    <th style="min-width:160px;" scope="col">Product description</th>
+                    <th style="min-width:120px;" scope="col">Expected date</th>
+                    <th style="min-width:120px;" scope="col">Status</th>
+                    <th scope="col">Units</th>                    
+                    <th scope="col">Req Qty</th>
+                    <th scope="col">Avl Qty</th>
+                    <th scope="col">Pur Qty</th>
+                    <th scope="col">Purpose</th>
+                    <th style="min-width:160px;" scope="col">Remarks</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -344,12 +425,19 @@
                             ?>
                     <tr>
                     <td><?php echo $row['id'];?></td>
+                    <td><?php echo $row['rdate'];?></td>
                     <td><?php echo $row['udate'];?></td>
                     <td><?php echo $row['dept'];?></td>
+                    <td><?php echo $row['reference'];?></td>
                     <td><?php echo $row['pcode'];?></td>
                     <td><?php echo $row['pdesc'];?></td>
                     <td><?php echo $row['ddate'];?></td>
                     <td><?php echo $row['mstatus'];?></td>
+                    <td><?php echo $row['units'];?></td>
+                    <td><?php echo $row['rqty'];?></td>
+                    <td><?php echo $row['aqty'];?></td>
+                    <td><?php echo $row['pqty'];?></td>
+                    <td><?php echo $row['purpose'];?></td>
                     <td><?php echo $row['remarks'];?></td>
                     </tr>
                     <?php

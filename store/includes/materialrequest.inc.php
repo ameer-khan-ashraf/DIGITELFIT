@@ -2,13 +2,21 @@
 include('dbh.inc.php');
 include('access.php');
 if(isset($_POST['lmr-submit']))
-{
+{   
+    $rdate = $_POST['rdate'];
+    $udate = $_POST['udate'];
     $dept = $_POST['dept'];
+    $dept = $_POST['reference'];
     $pcode = $_POST['pcode'];
     $pdesc = $_POST['pdesc'];
-    $remarks = $_POST['remarks'];
-    $udate = date("Y/m/d");
     $ddate =  $_POST['ddate'];
+    $unit =  $_POST['unit'];
+    $rqty =  $_POST['rqty'];
+    $aqty =  $_POST['aqty'];
+    $pqty = $rqty-$aqty;
+    $purpose = $_POST['purpose'];
+    $remarks = $_POST['remarks'];
+    
     
     if (empty($dept)){
         $_SESSION['status'] = 'Department cannot be empty' ;
@@ -47,7 +55,7 @@ if(isset($_POST['lmr-submit']))
        exit();
    } */
    else {
-            $sql = "INSERT INTO purchase (dept, udate,ddate,pcode,pdesc,remarks) VALUES (?,?,?,?,?,?)";
+            $sql = "INSERT INTO purchase (dept,rdate,udate,ddate,reference,pcode,pdesc,units,rqty,aqty,pqty,purpose,remarks) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
             $stmt = mysqli_stmt_init($conn);
             if (!mysqli_stmt_prepare($stmt, $sql)){
 
@@ -56,7 +64,7 @@ if(isset($_POST['lmr-submit']))
                 exit(); 
             }
             else {
-                mysqli_stmt_bind_param($stmt, "ssssss" ,$dept,$udate,$ddate,$pcode,$pdesc,$remarks);
+                mysqli_stmt_bind_param($stmt, "sssssssssssss" ,$dept,$rdate,$udate,$ddate,$reference,$pcode,$pdesc,$units,$rqty,$aqty,$pqty,$purpose,$remarks);
                 mysqli_stmt_execute($stmt);
                 $filename='storelog_'.date('m-d-Y').'.txt';
                 $filepath="../../logs/store/$filename";
@@ -75,12 +83,19 @@ if(isset($_POST['lmr-submit']))
 }
 elseif(isset($_POST['imr-submit']))
 {
+    $rdate = $_POST['rdate'];
+    $udate = $_POST['udate'];
     $dept = $_POST['dept'];
+    $dept = $_POST['reference'];
     $pcode = $_POST['pcode'];
     $pdesc = $_POST['pdesc'];
-    $remarks = $_POST['remarks'];
-    $udate = date("Y/m/d");
     $ddate =  $_POST['ddate'];
+    $unit =  $_POST['unit'];
+    $rqty =  $_POST['rqty'];
+    $aqty =  $_POST['aqty'];
+    $pqty = $rqty-$aqty;
+    $purpose = $_POST['purpose'];
+    $remarks = $_POST['remarks'];
     
     if (empty($dept)){
         $_SESSION['status'] = 'Department cannot be empty' ;
@@ -119,7 +134,7 @@ elseif(isset($_POST['imr-submit']))
        exit();
    } */
    else {
-            $sql = "INSERT INTO purchaseint (dept, udate,ddate,pcode,pdesc,remarks) VALUES (?,?,?,?,?,?)";
+            $sql = "INSERT INTO purchaseint (dept,rdate,udate,ddate,reference,pcode,pdesc,units,rqty,aqty,pqty,purpose,remarks) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
             $stmt = mysqli_stmt_init($conn);
             if (!mysqli_stmt_prepare($stmt, $sql)){
 
@@ -128,7 +143,7 @@ elseif(isset($_POST['imr-submit']))
                 exit(); 
             }
             else {
-                mysqli_stmt_bind_param($stmt, "ssssss" ,$dept,$udate,$ddate,$pcode,$pdesc,$remarks);
+                mysqli_stmt_bind_param($stmt, "sssssssssssss" ,$dept,$rdate,$udate,$ddate,$reference,$pcode,$pdesc,$units,$rqty,$aqty,$pqty,$purpose,$remarks);
                 mysqli_stmt_execute($stmt);
                 $filename='storelog_'.date('m-d-Y').'.txt';
                 $filepath="../../logs/store/$filename";

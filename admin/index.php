@@ -115,8 +115,8 @@
           <div class="row">
             <div class="col-xl-12 col-md-12 mb-4">
             <div class="card shadow mb-4">
-        <div class="card-header py-3">   
-            <h6 class="m-2 font-weight-bold text-primary">Order Status</h6>
+        <div class="card-header bg-gradient-primary py-3">   
+            <h6 class="m-2 font-weight-bold text-light">Order Status</h6>
         </div>
         <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:40vh;">
             <?php
@@ -183,8 +183,8 @@
             <div class="row">
             <div class="col-xl-12">
               <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-2 font-weight-bold text-primary">Sales Order Progress</h6>
+                <div class="card-header bg-gradient-primary py-3">
+                  <h6 class="m-2 font-weight-bold text-white">Sales Order Progress</h6>
                 </div>
                 <div class="card-body table-wrapper-scroll-y" style="height:40vh;">
                   <canvas id="mycanvas" >
@@ -198,8 +198,8 @@
                         
     <div class="col-xl-6 col-md-12 mb-4">
             <div class="card shadow mb-4">
-        <div class="card-header py-3">   
-            <h6 class="m-2 font-weight-bold text-primary">Rental Trailers</h6>
+        <div class="card-header bg-gradient-warning py-3">   
+            <h6 class="m-2 font-weight-bold text-dark">Rental Trailers</h6>
         </div>
         <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:50vh;">
             <?php
@@ -260,8 +260,8 @@
             </div>  
             <div class="col-xl-6">
               <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-2 font-weight-bold text-primary">Trailer Rent</h6>
+                <div class="card-header bg-gradient-warning py-3">
+                  <h6 class="m-2 font-weight-bold text-dark">Trailer Rent</h6>
                 </div>
                 <div class="card-body table-wrapper-scroll-y" style="height:50vh;">
                   <canvas id="trailerpie" >
@@ -275,8 +275,8 @@
                         
     <div class="col-xl-6 col-md-12 mb-4">
             <div class="card shadow mb-4">
-        <div class="card-header py-3">   
-            <h6 class="m-2 font-weight-bold text-primary">Rental Winch Machine</h6>
+        <div class="card-header bg-gradient-info py-3">   
+            <h6 class="m-2 font-weight-bold text-light">Rental Winch Machine</h6>
         </div>
         <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:50vh;">
             <?php
@@ -337,8 +337,8 @@
             </div>
             <div class="col-xl-6">
               <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-2 font-weight-bold text-primary">Winch Rent</h6>
+                <div class="card-header bg-gradient-info py-3">
+                  <h6 class="m-2 font-weight-bold text-light">Winch Rent</h6>
                 </div>
                 <div class="card-body table-wrapper-scroll-y" style="height:50vh;">
                   <canvas id="winchpie" >

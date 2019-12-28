@@ -15,6 +15,8 @@
 
   <!-- Page level custom scripts -->
   <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/app1.js"></script>
+  <script type="text/javascript" src="js/app2.js"></script>
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
 

@@ -17,22 +17,6 @@
 </li>
 
 <!-- Divider -->
-<hr class="sidebar-divider">
-
-<!-- Heading -->
-<div class="sidebar-heading">
-  Interface
-</div>
-
-<!-- Nav Item - Pages Collapse Menu -->
-<li class="nav-item">
-  <a class="nav-link collapsed" href="salesorder.php">
-    <i class="fas fa-folder-open"></i>
-    <span>Orders</span>
-  </a>
-</li>
-
-<!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">
 
 <!-- Sidebar Toggler (Sidebar) -->

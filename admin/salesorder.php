@@ -9,8 +9,8 @@
 
 <div class="container-fluid">
     <div class="card shadow mb-4">
-        <div class="card-header py-3">   
-            <h6 class="m-2 font-weight-bold text-primary">Sales Order Approval
+        <div class="card-header bg-gradient-danger py-3">   
+            <h6 class="m-2 font-weight-bold text-light">Sales Order Approval
             </h6>
         </div>
         <div class="card-body">

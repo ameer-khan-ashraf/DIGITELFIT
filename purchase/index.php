@@ -116,8 +116,8 @@
           <div class="row">
             <div class="col-xl-12 col-md-12 mb-4">
             <div class="card shadow mb-4">
-        <div class="card-header py-3"> 
-            <h6 class="m-2 font-weight-bold text-primary">
+        <div class="card-header bg-gradient-primary py-3"> 
+            <h6 class="m-2 font-weight-bold text-light">
             Local Material Request</h6>
         </div>
         <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:40vh;">
@@ -137,7 +137,7 @@
             $query = "SELECT * FROM purchase";
             $query_run = mysqli_query($conn,$query)
             ?>
-            <table class="table table-striped ">
+            <table class="table table-bordered table-striped ">
                 <thead>
                     <tr>
                     <th scope="col">S.No</th>
@@ -186,8 +186,8 @@
                         
     <div class="col-xl-12 col-md-12 mb-4">
             <div class="card shadow mb-4">
-        <div class="card-header py-3">   
-            <h6 class="m-2 font-weight-bold text-primary">
+        <div class="card-header bg-gradient-info py-3">   
+            <h6 class="m-2 font-weight-bold text-light">
               International Material Request</h6>
         </div>
         <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:50vh;">

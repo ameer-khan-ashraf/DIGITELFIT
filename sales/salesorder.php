@@ -9,8 +9,8 @@
 <div class="modal fade" id="registermodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New Sales Order</h5>
+            <div class="modal-header bg-gradient-warning">
+              <h5 class="modal-title text-dark" id="exampleModalLabel">New Sales Order</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" name="so-submit" class="btn btn-primary">Save</button>
+                    <button type="submit" name="so-submit" class="btn btn-warning text-dark">Save</button>
                 </div>
             </form>
           </div>
@@ -53,9 +53,9 @@
 
 <div class="container-fluid">
     <div class="card shadow mb-4">
-        <div class="card-header py-3">   
-            <h6 class="m-2 font-weight-bold text-primary">Sales Orders 
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registermodal">
+        <div class="card-header bg-gradient-danger py-3">   
+            <h6 class="m-2 font-weight-bold text-light">Sales Orders 
+                <button type="button" class="btn btn-warning text-dark" data-toggle="modal" data-target="#registermodal">
                 Create New Order
                 </button>
             </h6>

@@ -8,8 +8,8 @@
 <div class="modal fade" id="trailermodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New Trailer</h5>
+            <div class="modal-header bg-gradient-warning">
+              <h5 class="modal-title text-dark" id="exampleModalLabel">New Trailer</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" name="so-submit" class="btn btn-primary">Save</button>
+                    <button type="submit" name="so-submit" class="btn text-dark btn-warning">Save</button>
                 </div>
             </form>
           </div>
@@ -39,9 +39,9 @@
 
 <div class="container-fluid">
     <div class="card shadow mb-4">
-        <div class="card-header py-3">   
-            <h6 class="m-2 font-weight-bold text-primary">Trailer
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trailermodal">
+        <div class="card-header bg-gradient-danger py-3">   
+            <h6 class="m-2 font-weight-bold text-light">Trailer
+                <button type="button" class=" text-dark mx-2 btn btn-warning" data-toggle="modal" data-target="#trailermodal">
                 Add Machine
                 </button>
             </h6>
@@ -133,8 +133,8 @@
 <div class="modal fade" id="winchmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New Winch Machine</h5>
+            <div class="modal-header bg-gradient-warning">
+              <h5 class="modal-title text-dark" id="exampleModalLabel">New Winch Machine</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -154,7 +154,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" name="so-submit" class="btn btn-primary">Save</button>
+                    <button type="submit" name="so-submit" class="btn btn-warning text-dark">Save</button>
                 </div>
             </form>
           </div>
@@ -163,9 +163,9 @@
 
 <div class="container-fluid">
     <div class="card shadow mb-4">
-        <div class="card-header py-3">   
-            <h6 class="m-2 font-weight-bold text-primary">Winch Machine
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#winchmodal">
+        <div class="card-header bg-gradient-success py-3">   
+            <h6 class="m-2 font-weight-bold text-light">Winch Machine
+                <button type="button" class="btn btn-warning text-dark mx-2" data-toggle="modal" data-target="#winchmodal">
                 Add Equipment
                 </button>
             </h6>
