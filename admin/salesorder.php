@@ -94,9 +94,6 @@
             <div class="card shadow mb-4">
         <div class="card-header bg-gradient-primary py-3"> 
             <h6 class="m-2 font-weight-bold text-light">
-            <button type="button" class="btn btn-warning text-dark" data-toggle="modal" data-target="#lmrmodal">
-            Create New Request
-            </button>  
             Local Material Request</h6>
         </div>
         <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:40vh;">
@@ -127,13 +124,13 @@
                     <th scope="col">Product code</th>
                     <th style="min-width:160px;" scope="col">Product description</th>
                     <th style="min-width:120px;" scope="col">Expected date</th>
-                    <th style="min-width:120px;" scope="col">Status</th>
                     <th scope="col">Units</th>                    
                     <th scope="col">Req Qty</th>
                     <th scope="col">Avl Qty</th>
                     <th scope="col">Pur Qty</th>
                     <th scope="col">Purpose</th>
                     <th style="min-width:160px;" scope="col">Remarks</th>
+                    <th style="min-width:120px;" scope="col">Status</th>
                     
                     </tr>
                 </thead>
@@ -153,13 +150,26 @@
                     <td><?php echo $row['pcode'];?></td>
                     <td><?php echo $row['pdesc'];?></td>
                     <td><?php echo $row['ddate'];?></td>
-                    <td><?php echo $row['mstatus'];?></td>
                     <td><?php echo $row['units'];?></td>
                     <td><?php echo $row['rqty'];?></td>
                     <td><?php echo $row['aqty'];?></td>
                     <td><?php echo $row['pqty'];?></td>
                     <td><?php echo $row['purpose'];?></td>
                     <td><?php echo $row['remarks'];?></td>
+                    <form action="includes/updateprog.inc.php?id=<?php echo $row['id'];?>" method="POST">
+                    <td>
+                        <div class="form-group">
+                            <select name="edit_approval" class="form-control">
+                                <option value="" disabled selected hidden><?php echo $row['mstatus'];?></option>
+                                <option value="Rejected">Rejected</option>
+                                <option value="Approved">Approved</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                    <button name="aprv-lmr" type="submit" class="btn btn-primary">Update</button>
+                    </td>
+                    </form>
                     </tr>
                     <?php
 
@@ -181,10 +191,7 @@
     <div class="col-xl-12 col-md-12 mb-4">
             <div class="card shadow mb-4">
         <div class="card-header bg-gradient-info py-3">   
-            <h6 class="m-2 font-weight-bold text-light">
-            <button type="button" class="btn btn-warning text-dark" data-toggle="modal" data-target="#imrmodal">
-            Create New Request
-            </button>  
+            <h6 class="m-2 font-weight-bold text-light"> 
               International Material Request</h6>
         </div>
         <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:50vh;">
@@ -215,13 +222,13 @@
                     <th scope="col">Product code</th>
                     <th style="min-width:160px;" scope="col">Product description</th>
                     <th style="min-width:120px;" scope="col">Expected date</th>
-                    <th style="min-width:120px;" scope="col">Status</th>
                     <th scope="col">Units</th>                    
                     <th scope="col">Req Qty</th>
                     <th scope="col">Avl Qty</th>
                     <th scope="col">Pur Qty</th>
                     <th scope="col">Purpose</th>
                     <th style="min-width:160px;" scope="col">Remarks</th>
+                    <th style="min-width:120px;" scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -240,13 +247,26 @@
                     <td><?php echo $row['pcode'];?></td>
                     <td><?php echo $row['pdesc'];?></td>
                     <td><?php echo $row['ddate'];?></td>
-                    <td><?php echo $row['mstatus'];?></td>
                     <td><?php echo $row['units'];?></td>
                     <td><?php echo $row['rqty'];?></td>
                     <td><?php echo $row['aqty'];?></td>
                     <td><?php echo $row['pqty'];?></td>
                     <td><?php echo $row['purpose'];?></td>
                     <td><?php echo $row['remarks'];?></td>
+                    <form action="includes/updateprog.inc.php?id=<?php echo $row['id'];?>" method="POST">
+                    <td>
+                        <div class="form-group">
+                            <select name="edit_approval" class="form-control">
+                                <option value="" disabled selected hidden><?php echo $row['mstatus'];?></option>
+                                <option value="Rejected">Rejected</option>
+                                <option value="Approved">Approved</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                    <button name="aprv-imr" type="submit" class="btn btn-primary">Update</button>
+                    </td>
+                    </form>
                     </tr>
                     <?php
 

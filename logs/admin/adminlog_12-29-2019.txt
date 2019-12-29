@@ -1,2 +1,20 @@
 administratorhas logged in at10:03:35
 -----------------------------------------------------------------------
+administrator updated Material request approval at 11:15:52
+Id: 0 date requested: 2019-12-28 date placed: 2019-12-29 date due 2019-12-31 dept: r&d Status  Reference ght0 Product Code 0090 Product description adadlks Unit ppo Required qty23 Available Qty 2 Purchase qty 21 Purpose marketing Remarks asap
+-----------------------------------------------------------------------
+administrator updated Material request approval at 11:16:02
+Id: 0 date requested: 2019-12-28 date placed: 2019-12-29 date due 2019-12-31 dept: r&d Status Approved Reference ght0 Product Code 0090 Product description adadlks Unit ppo Required qty23 Available Qty 2 Purchase qty 21 Purpose marketing Remarks asap
+-----------------------------------------------------------------------
+administrator updated Material request approval at 11:18:38
+Id: 0 date requested: 2019-12-30 date placed: 2019-12-31 date due 2019-12-26 dept: r&d Status Approved Reference ght0 Product Code 00ty Product description adadlks Unit ppo Required qty23 Available Qty 2 Purchase qty 21 Purpose marketing Remarks dbd
+-----------------------------------------------------------------------
+administrator updated Material request approval at 11:18:50
+Id: 4 date requested: 0000-00-00 date placed: 0000-00-00 date due 2019-12-27 dept: production Status Approved Reference  Product Code 3445 Product description Wrench Unit  Required qty0 Available Qty 0 Purchase qty 0 Purpose  Remarks Product must be size 10
+-----------------------------------------------------------------------
+administrator updated Material request approval at 11:20:11
+Id: 4 date requested: 0000-00-00 date placed: 0000-00-00 date due 2019-12-27 dept: production Status Approved Reference  Product Code 3445 Product description Wrench Unit  Required qty0 Available Qty 0 Purchase qty 0 Purpose  Remarks Product must be size 10
+-----------------------------------------------------------------------
+administrator updated Material request approval at 11:22:19
+Id: 4 date requested: 0000-00-00 date placed: 0000-00-00 date due 2019-12-27 dept: production Status Approved Reference  Product Code 3445 Product description Wrench Unit  Required qty0 Available Qty 0 Purchase qty 0 Purpose  Remarks Product must be size 10
+-----------------------------------------------------------------------
