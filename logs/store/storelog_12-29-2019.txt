@@ -27,3 +27,9 @@ Department: ght0Upload date: 2019-12-29 date due 2019-12-31 Product code 00ty Pr
 storeuser created International material request at 01:35:10
 Department: r&dUpload date: 2019-12-31 date due 2019-12-26 Product code 00ty Product description adadlks Product Remarks dbd
 -----------------------------------------------------------------------
+middleditch created local material request at 07:46:47
+Department: salesUpload date: 2019-12-29 date due 2019-12-31 Product code 00ty Product description adadlks Product Remarks asap
+-----------------------------------------------------------------------
+middleditch created local material request at 09:57:38
+Department: maintenanceUpload date: 2019-12-29 date due 2020-01-08 Product code 00ty Product description adadlks Product Remarks dbd
+-----------------------------------------------------------------------

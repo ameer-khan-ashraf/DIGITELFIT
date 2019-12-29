@@ -139,15 +139,23 @@
             ?>
             <table class="table table-bordered table-striped ">
                 <thead>
-                    <tr>
+                <tr>
                     <th scope="col">S.No</th>
-                    <th scope="col">Upload Date</th>
-                    <th scope="col">Dept</th>
+                    <th style="min-width:120px;" scope="col">Required Date</th>
+                    <th style="min-width:120px;" scope="col">Uploaded Date</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Reference</th>
                     <th scope="col">Product code</th>
-                    <th scope="col">Product description</th>
-                    <th scope="col">Expected date</th>
-                    <th scope="col">Status</th>
-                    <th style="width: 30%" scope="col">Remarks</th>
+                    <th style="min-width:160px;" scope="col">Product description</th>
+                    <th style="min-width:120px;" scope="col">Expected date</th>
+                    <th style="min-width:120px;" scope="col">Status</th>
+                    <th scope="col">Units</th>                    
+                    <th scope="col">Req Qty</th>
+                    <th scope="col">Avl Qty</th>
+                    <th scope="col">Pur Qty</th>
+                    <th scope="col">Purpose</th>
+                    <th style="min-width:160px;" scope="col">Remarks</th>
+                    
                     </tr>
                 </thead>
                 <tbody>
@@ -159,12 +167,19 @@
                             ?>
                     <tr>
                     <td><?php echo $row['id'];?></td>
+                    <td><?php echo $row['rdate'];?></td>
                     <td><?php echo $row['udate'];?></td>
                     <td><?php echo $row['dept'];?></td>
+                    <td><?php echo $row['reference'];?></td>
                     <td><?php echo $row['pcode'];?></td>
                     <td><?php echo $row['pdesc'];?></td>
                     <td><?php echo $row['ddate'];?></td>
                     <td><?php echo $row['mstatus'];?></td>
+                    <td><?php echo $row['units'];?></td>
+                    <td><?php echo $row['rqty'];?></td>
+                    <td><?php echo $row['aqty'];?></td>
+                    <td><?php echo $row['pqty'];?></td>
+                    <td><?php echo $row['purpose'];?></td>
                     <td><?php echo $row['remarks'];?></td>
                     </tr>
                     <?php
@@ -186,9 +201,8 @@
                         
     <div class="col-xl-12 col-md-12 mb-4">
             <div class="card shadow mb-4">
-        <div class="card-header bg-gradient-info py-3">   
-            <h6 class="m-2 font-weight-bold text-light">
-              International Material Request</h6>
+        <div class="card-header bg-gradient-danger py-3">   
+            <h6 class="m-2 font-weight-bold text-light">International Material Request</h6>
         </div>
         <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:50vh;">
             <?php
@@ -207,17 +221,24 @@
             $query = "SELECT * FROM purchaseint";
             $query_run = mysqli_query($conn,$query)
             ?>
-            <table class="table table-striped ">
+            <table class="table table-bordered table-striped ">
                 <thead>
                     <tr>
                     <th scope="col">S.No</th>
-                    <th scope="col">Upload Date</th>
-                    <th scope="col">Dept</th>
+                    <th style="min-width:120px;" scope="col">Required Date</th>
+                    <th style="min-width:120px;" scope="col">Uploaded Date</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Reference</th>
                     <th scope="col">Product code</th>
-                    <th scope="col">Product description</th>
-                    <th scope="col">Status</th>
-                    <th style="width: 20%" scope="col">Remarks</th>
-                    <th scope="col">Expected date</th>
+                    <th style="min-width:160px;" scope="col">Product description</th>
+                    <th style="min-width:120px;" scope="col">Status</th>
+                    <th scope="col">Units</th>                    
+                    <th scope="col">Req Qty</th>
+                    <th scope="col">Avl Qty</th>
+                    <th scope="col">Pur Qty</th>
+                    <th scope="col">Purpose</th>
+                    <th style="min-width:160px;" scope="col">Remarks</th>
+                    <th style="min-width:160px;" scope="col">Expected date</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -229,11 +250,18 @@
                             ?>
                     <tr>
                     <td><?php echo $row['id'];?></td>
+                    <td><?php echo $row['rdate'];?></td>
                     <td><?php echo $row['udate'];?></td>
                     <td><?php echo $row['dept'];?></td>
+                    <td><?php echo $row['reference'];?></td>
                     <td><?php echo $row['pcode'];?></td>
                     <td><?php echo $row['pdesc'];?></td>
                     <td><?php echo $row['mstatus'];?></td>
+                    <td><?php echo $row['units'];?></td>
+                    <td><?php echo $row['rqty'];?></td>
+                    <td><?php echo $row['aqty'];?></td>
+                    <td><?php echo $row['pqty'];?></td>
+                    <td><?php echo $row['purpose'];?></td>
                     <td><?php echo $row['remarks'];?></td>
                     <form action="includes/materialrequpdate.inc.php?id=<?php echo $row['id'];?>" method="POST">
                     <td>
@@ -246,7 +274,6 @@
                     </td>
                     </form>
                     </tr>
-                    
                     <?php
 
                         }

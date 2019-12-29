@@ -3,3 +3,10 @@ Bachmanhas logged in at12:59:40
 Bachman created a new user storeuser at 01:00:20
 Values username= storeuser email= store@elfit.com department= store
 -----------------------------------------------------------------------
+bachmanhas logged in at07:31:07
+-----------------------------------------------------------------------
+bachman created a new user purchaseuser at 07:31:51
+Values username= purchaseuser email= purchase@elfitarabia.com department= purchase
+-----------------------------------------------------------------------
+purchaseuserhas logged out at07:38:16
+-----------------------------------------------------------------------
