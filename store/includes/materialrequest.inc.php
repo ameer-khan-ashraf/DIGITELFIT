@@ -6,7 +6,7 @@ if(isset($_POST['lmr-submit']))
     $rdate = $_POST['rdate'];
     $udate = $_POST['udate'];
     $dept = $_POST['dept'];
-    $dept = $_POST['reference'];
+    $reference = $_POST['reference'];
     $pcode = $_POST['pcode'];
     $pdesc = $_POST['pdesc'];
     $ddate =  $_POST['ddate'];
@@ -64,7 +64,7 @@ if(isset($_POST['lmr-submit']))
                 exit(); 
             }
             else {
-                mysqli_stmt_bind_param($stmt, "sssssssssssss" ,$dept,$rdate,$udate,$ddate,$reference,$pcode,$pdesc,$units,$rqty,$aqty,$pqty,$purpose,$remarks);
+                mysqli_stmt_bind_param($stmt, "sssssssssssss" ,$dept,$rdate,$udate,$ddate,$reference,$pcode,$pdesc,$unit,$rqty,$aqty,$pqty,$purpose,$remarks);
                 mysqli_stmt_execute($stmt);
                 $filename='storelog_'.date('m-d-Y').'.txt';
                 $filepath="../../logs/store/$filename";
@@ -73,9 +73,23 @@ if(isset($_POST['lmr-submit']))
                 'Department: '.$dept.'Upload date: '.$udate.' date due '.$ddate.' Product code '.$pcode.' Product description '.$pdesc.' Product Remarks '.$remarks.PHP_EOL.
                 '-----------------------------------------------------------------------'.PHP_EOL;
                 fwrite($myfile, $log);
-                $_SESSION['success'] = "Sales Order Added" ;
-                header('Location:../index.php');
-                exit();
+                //$_SESSION['success'] = 
+                printf("Error: %s\n", mysqli_error($conn)) ;
+                echo $dept;
+                echo $rdate;
+                echo $udate;
+                echo $ddate;
+                echo $reference;
+                echo $pcode;
+                echo $pdesc;
+                echo $unit;
+                echo $rqty;
+                echo $aqty;
+                echo $pqty;
+                echo $purpose;
+                echo $remarks;
+                //header('Location:../index.php');
+                //exit();
             }
         }
    mysqli_stmt_close($stmt);
@@ -86,7 +100,7 @@ elseif(isset($_POST['imr-submit']))
     $rdate = $_POST['rdate'];
     $udate = $_POST['udate'];
     $dept = $_POST['dept'];
-    $dept = $_POST['reference'];
+    $reference = $_POST['reference'];
     $pcode = $_POST['pcode'];
     $pdesc = $_POST['pdesc'];
     $ddate =  $_POST['ddate'];
@@ -143,7 +157,7 @@ elseif(isset($_POST['imr-submit']))
                 exit(); 
             }
             else {
-                mysqli_stmt_bind_param($stmt, "sssssssssssss" ,$dept,$rdate,$udate,$ddate,$reference,$pcode,$pdesc,$units,$rqty,$aqty,$pqty,$purpose,$remarks);
+                mysqli_stmt_bind_param($stmt, "sssssssssssss" ,$dept,$rdate,$udate,$ddate,$reference,$pcode,$pdesc,$unit,$rqty,$aqty,$pqty,$purpose,$remarks);
                 mysqli_stmt_execute($stmt);
                 $filename='storelog_'.date('m-d-Y').'.txt';
                 $filepath="../../logs/store/$filename";

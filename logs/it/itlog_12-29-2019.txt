@@ -1,0 +1,5 @@
+Bachmanhas logged in at12:59:40
+-----------------------------------------------------------------------
+Bachman created a new user storeuser at 01:00:20
+Values username= storeuser email= store@elfit.com department= store
+-----------------------------------------------------------------------

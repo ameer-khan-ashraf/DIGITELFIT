@@ -1,0 +1,29 @@
+storeuserhas logged in at01:00:48
+-----------------------------------------------------------------------
+storeuser created local material request at 01:02:28
+Department: ght0Upload date: 2019-12-29 date due 2019-12-31 Product code 0090 Product description adadlks Product Remarks asap
+-----------------------------------------------------------------------
+storeuser created local material request at 01:06:22
+Department: ght0Upload date: 2019-12-29 date due 2019-12-31 Product code 00ty Product description adadlks Product Remarks dbd
+-----------------------------------------------------------------------
+storeuser created local material request at 01:11:12
+Department: ght0Upload date: 2019-12-29 date due 2019-12-31 Product code 0090 Product description adadlks Product Remarks asap
+-----------------------------------------------------------------------
+storeuser created International material request at 01:12:17
+Department: ght0Upload date: 2019-12-30 date due 2019-12-31 Product code 0090 Product description adadlks Product Remarks asap
+-----------------------------------------------------------------------
+storeuser created local material request at 01:16:56
+Department: ght0Upload date: 2019-12-29 date due 2019-12-31 Product code 0090 Product description adadlks Product Remarks asap
+-----------------------------------------------------------------------
+storeuser created local material request at 01:19:30
+Department: r&dUpload date: 2019-12-29 date due 2019-12-31 Product code 0090 Product description adadlks Product Remarks asap
+-----------------------------------------------------------------------
+storeuser created local material request at 01:19:59
+Department: r&dUpload date: 2019-12-29 date due 2019-12-31 Product code 0090 Product description adadlks Product Remarks asap
+-----------------------------------------------------------------------
+storeuser created International material request at 01:32:23
+Department: ght0Upload date: 2019-12-29 date due 2019-12-31 Product code 00ty Product description adadlks Product Remarks asap
+-----------------------------------------------------------------------
+storeuser created International material request at 01:35:10
+Department: r&dUpload date: 2019-12-31 date due 2019-12-26 Product code 00ty Product description adadlks Product Remarks dbd
+-----------------------------------------------------------------------

@@ -19,12 +19,12 @@
 
                 <div class="form-group">
                         <label>Requested Date</label>
-                        <input type="date" name="rdate" class="form-control" placeholder="Deadline" required="required">
+                        <input type="date" name="rdate" class="form-control" placeholder="Requested Date" required="required">
                     </div>
 
                     <div class="form-group">
                         <label>Uploaded Date</label>
-                        <input type="date" name="udate" class="form-control" placeholder="Deadline" required="required">
+                        <input type="date" name="udate" class="form-control" placeholder="Uploaded Date" required="required">
                     </div>
 
                       <div class="form-group">
@@ -61,7 +61,7 @@
 
                     <div class="form-group">
                         <label>Units</label>
-                        <input type="text" name="units" class="form-control" placeholder="Enter units" required="required">
+                        <input type="text" name="unit" class="form-control" placeholder="Enter units" required="required">
                     </div>
                     <div class="form-group">
                         <label>Required Quantity</label>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="form-group">
                         <label>Available Quantity</label>
-                        <input type="text" name="rqty" class="form-control" placeholder="Enter available quantity">
+                        <input type="text" name="aqty" class="form-control" placeholder="Enter available quantity">
                     </div>
                     <div class="form-group">
                         <label>Purpose</label>
@@ -153,7 +153,7 @@
                     </div>
                     <div class="form-group">
                         <label>Available Quantity</label>
-                        <input type="text" name="rqty" class="form-control" placeholder="Enter available quantity">
+                        <input type="text" name="aqty" class="form-control" placeholder="Enter available quantity">
                     </div>
                     
                     <div class="form-group">
