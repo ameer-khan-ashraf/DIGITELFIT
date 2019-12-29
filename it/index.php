@@ -1,130 +1,136 @@
 <?php
-    include('includes/access.root.php'); 
-    include('includes/dbh.inc.php');
+    include('includes/access.root.php');
     include('includes/header.php');
     include('includes/navbar.php');
+    include('includes/dbh.inc.php');
 ?>
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800"> IT Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+<!-- Modal -->
+<div class="modal fade" id="registermodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header bg-gradient-warning">
+              <h5 class="modal-title text-dark" id="exampleModalLabel">Register New User</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form action="includes/signup.inc.php" method="post">
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" name="uid" class="form-control" placeholder="Username" required="required">
+
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" name="mail" class="form-control" placeholder="Email" required="required">
+                </div>
+
+                <div class="form-group">
+                    <label>USER TYPE</label>
+                    <select name="department" class="form-control">
+                        <option value="admin">Admin</option>
+                        <option value="sales">Sales</option>
+                        <option value="store">Store</option>
+                        <option value="production">Production</option>
+                        <option value="IT">IT</option>
+                        <option value="purchase">Purchase</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="pwd" class="form-control" placeholder="Password..." required="required">
+                </div>
+
+                <div class="form-group">
+                    <label>Repeat Password</label>
+                    <input type="password" name="pwd-repeat" class="form-control" placeholder="Repeat password" required="required">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" name="signup-submit" class="btn btn-warning text-dark">Save</button>
+            </div>
+        </form>
           </div>
-          
-          <?php
-              if(isset($_SESSION['success']) && $_SESSION['success'] !='')
-              {
-                  echo '<h2>'.$_SESSION['success'].'</h2>';
-                  unset($_SESSION['success']);
-              }
-              if (isset($_SESSION['status']) && $_SESSION['status'] !='') 
-              {
-                  echo '<h2 class="bg-info">'.$_SESSION['status'].'</h2>';
-                  unset($_SESSION['status']);
-              }
-          ?>
-          <!-- Content Row -->
-          <div class="row">
+        </div>
+      </div>
 
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Users</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">
-                        <?php
-                        $query = "SELECT idUsers FROM users ORDER BY idUsers";
-                        $query_run = mysqli_query($conn,$query);
-                        $row = mysqli_num_rows($query_run);
-                        echo '<p>Total Users: '.$row.'</p>';
-                        ?>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header bg-gradient-success py-3">   
+            <h6 class="m-2 font-weight-bold text-light">User Profiles
+                <button type="button" class="btn btn-warning text-dark" data-toggle="modal" data-target="#registermodal">
+                Register New User
+                </button>
+            </h6>
+        </div>
+        <div class="card-body">
+            <?php
+            if(isset($_SESSION['success']) && $_SESSION['success'] !='')
+            {
+                echo '<h2>'.$_SESSION['success'].'</h2>';
+                unset($_SESSION['success']);
+            }
+            if (isset($_SESSION['status']) && $_SESSION['status'] !='') 
+            {
+                echo '<h2 class="bg-info">'.$_SESSION['status'].'</h2>';
+                unset($_SESSION['status']);
+            }
+            ?>
+            <?php
+            $query = "SELECT * FROM users";
+            $query_run = mysqli_query($conn,$query)
+            ?>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                    <th scope="col">User ID</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">EDIT</th>
+                    <th scope="col">DELETE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if(mysqli_num_rows($query_run) > 0)
+                    {
+                        while($row = mysqli_fetch_assoc($query_run))
+                        {
+                            ?>
+                    <tr>
+                    <td><?php echo $row['idUsers'];?></td>
+                    <td><?php echo $row['uidUsers'];?></td>
+                    <td><?php echo $row['emailUsers'];?></td>
+                    <td><?php echo $row['deptname'];?></td>
+                    <td>
+                    <a class="btn btn-success" href="useredit.php?edit=<?php echo $row['idUsers'];?>">Edit</a>
+                    </td>
+                    <td>
+                    <a class="btn btn-danger" href="includes/userdelete.inc.php?delete=<?php echo $row['idUsers'];?>">Delete</a>
+                    </td>
+                    </tr>
+                    <?php
 
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Earnings (Annual)</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
-                      <div class="row no-gutters align-items-center">
-                        <div class="col-auto">
-                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                        </div>
-                        <div class="col">
-                          <div class="progress progress-sm mr-2">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pending Requests Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-warning shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-comments fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                        }
+                    }
+                    else {
+                        echo "No Record Found";
+                        }
+                    ?>
+                </tbody>
+            </table>
 
         </div>
-        <!-- /.container-fluid -->
-
-      </div>
-      <!-- End of Main Content -->
-      <?php
+    </div>
+</div>
+<?php
       include("includes/scripts.php");
-      include("includes/footer.php")
-      ?>
-
-
-
-
-  
-
+      include("includes/footer.php");
+?>
