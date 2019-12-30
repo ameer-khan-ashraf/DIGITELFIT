@@ -10,3 +10,27 @@ Values username= purchaseuser email= purchase@elfitarabia.com department= purcha
 -----------------------------------------------------------------------
 purchaseuserhas logged out at07:38:16
 -----------------------------------------------------------------------
+administrator Updated user middleditch at 12:01:22
+Changed Values username= PRODUCTION email= wijawap177@netmail8.com department= production
+-----------------------------------------------------------------------
+administrator Updated user PRODUCTION at 12:01:34
+Changed Values username= production email= wijawap177@netmail8.com department= admin
+-----------------------------------------------------------------------
+administrator Updated user Bachman at 12:01:47
+Changed Values username= it email= it@elfitarabia.com department= admin
+-----------------------------------------------------------------------
+administrator Updated user it at 12:01:54
+Changed Values username= it email= it@elfitarabia.com department= IT
+-----------------------------------------------------------------------
+administrator Updated user sam at 12:02:09
+Changed Values username= sales email= sam123@gmail.com department= sales
+-----------------------------------------------------------------------
+administrator Updated user it at 12:02:25
+Changed Values username= ituser email= it@elfitarabia.com department= IT
+-----------------------------------------------------------------------
+administrator Updated user storeuser at 12:02:39
+Changed Values username= store email= store@elfit.com department= store
+-----------------------------------------------------------------------
+administrator Updated user purchaseuser at 12:02:49
+Changed Values username= purchase email= purchase@elfitarabia.com department= purchase
+-----------------------------------------------------------------------

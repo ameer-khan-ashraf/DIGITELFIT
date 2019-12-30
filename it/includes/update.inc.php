@@ -35,13 +35,13 @@ if(isset($_POST['update-btn']))
         '-----------------------------------------------------------------------'.PHP_EOL;
         fwrite($myfile, $log);
         $_SESSION['success'] = "Your Data is Updated";
-        header('location: ../register.php');
+        header('location: ../index.php');
         exit();
     }
     else {
         $_SESSION['status'] = "Your Data is NOT updated";
         printf("Error: %s\n", mysqli_error($conn));
-        header('Location: ../register.php');
+        header('Location: ../index.php');
         exit();
     }
     }
@@ -49,7 +49,7 @@ if(isset($_POST['update-btn']))
     elseif ((empty($pass)||empty($pwdrepeat))||$pass!=$pwdrepeat){
         $_SESSION['status'] = "Passwords Not Matching or Field is empty";
         printf("Error: %s\n", mysqli_error($conn));
-        header('Location: ../register.php');
+        header('Location: ../index.php');
         exit();
     }
     elseif($pass==$pwdrepeat){
@@ -67,14 +67,14 @@ if(isset($_POST['update-btn']))
         '-----------------------------------------------------------------------'.PHP_EOL;
         fwrite($myfile, $log);
         $_SESSION['success'] = "Your Data is Updated";
-        header('location: ../register.php');
+        header('location: ../index.php');
         exit();
         }
     }
     else {
         $_SESSION['status'] = "Your Data is NOT updated";
         printf("Error: %s\n", mysqli_error($conn));
-        header('Location: ../register.php');
+        header('Location: ../index.php');
         exit();
     }
 }

@@ -53,7 +53,7 @@
         <label>Repeat Password</label>
             <input type="password" name="edit_repeat" class="form-control" placeholder="Repeat password" />
         </div>
-        <a href="register.php" class="btn btn-danger">CANCEL </a>
+        <a href="index.php" class="btn btn-danger">CANCEL </a>
         <button name="update-btn" class="btn btn-primary">Update</button>
     </form>
         <?php

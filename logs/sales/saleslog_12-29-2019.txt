@@ -1,2 +1,5 @@
 samhas logged in at07:38:24
 -----------------------------------------------------------------------
+administrator created sales order at 11:48:17
+Values Orderno: EA-SO19-1107 date placed: 2019/12/29 date due 2019-12-31 Priority medium
+-----------------------------------------------------------------------

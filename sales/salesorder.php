@@ -39,7 +39,7 @@
                     </div>
                     <div class="form-group">
                         <label>SO copy</label>
-                        <input accept="application/pdf" type="file" name="file" class="form-control" required="required">
+                        <input accept="application/pdf" type="file" name="file" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">

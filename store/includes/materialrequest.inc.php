@@ -73,23 +73,10 @@ if(isset($_POST['lmr-submit']))
                 'Department: '.$dept.'Upload date: '.$udate.' date due '.$ddate.' Product code '.$pcode.' Product description '.$pdesc.' Product Remarks '.$remarks.PHP_EOL.
                 '-----------------------------------------------------------------------'.PHP_EOL;
                 fwrite($myfile, $log);
-                //$_SESSION['success'] = 
+                $_SESSION['success'] ="Material Request Added"; 
                 printf("Error: %s\n", mysqli_error($conn)) ;
-                echo $dept;
-                echo $rdate;
-                echo $udate;
-                echo $ddate;
-                echo $reference;
-                echo $pcode;
-                echo $pdesc;
-                echo $unit;
-                echo $rqty;
-                echo $aqty;
-                echo $pqty;
-                echo $purpose;
-                echo $remarks;
-                //header('Location:../index.php');
-                //exit();
+                header('Location:../index.php');
+                exit();
             }
         }
    mysqli_stmt_close($stmt);

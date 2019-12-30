@@ -26,7 +26,7 @@
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
-  <a class="nav-link collapsed" href="register.php">
+  <a class="nav-link collapsed" href="index.php">
     <i class="fas fa-users-cog"></i>
     <span>Admin Page</span>
   </a>

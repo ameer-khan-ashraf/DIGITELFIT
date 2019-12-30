@@ -33,3 +33,12 @@ Department: salesUpload date: 2019-12-29 date due 2019-12-31 Product code 00ty P
 middleditch created local material request at 09:57:38
 Department: maintenanceUpload date: 2019-12-29 date due 2020-01-08 Product code 00ty Product description adadlks Product Remarks dbd
 -----------------------------------------------------------------------
+administrator created local material request at 11:55:48
+Department: salesUpload date: 2019-12-23 date due 2019-12-31 Product code PL 0352 A Product description Pin for DTP receptacle 14-12 AWG Product Remarks n/a
+-----------------------------------------------------------------------
+administrator created local material request at 11:56:53
+Department: salesUpload date: 2019-12-23 date due 2019-12-31 Product code PL 0352 A Product description Pin for DTP receptacle 14-12 AWG Product Remarks n/a
+-----------------------------------------------------------------------
+administrator created International material request at 12:00:49
+Department: productionUpload date: 2019-12-23 date due 2019-12-31 Product code NEW ITEM Product description TYRE 11R 22.5 RADIAL Product Remarks N/A
+-----------------------------------------------------------------------

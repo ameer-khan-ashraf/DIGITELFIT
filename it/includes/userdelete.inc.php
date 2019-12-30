@@ -18,7 +18,7 @@
      if ($query_run) {
     
         $_SESSION['success'] = "User deleted";
-        header('location: ../register.php');
+        header('location: ../index.php');
         exit();
     }
     else {
