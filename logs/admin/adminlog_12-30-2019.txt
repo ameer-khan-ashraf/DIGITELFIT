@@ -5,3 +5,7 @@ administratorhas logged out at07:42:57
 store updated Material request approval at 07:43:57
 Id: 1 date requested: 2019-12-22 date placed: 2019-12-23 date due 2019-12-31 dept: sales Status Rejected Reference RD 46 Product Code PL 0352 A Product description Pin for DTP receptacle 14-12 AWG Unit PKTS Required qty2 Available Qty 0 Purchase qty 2 Purpose Winch Machine Remarks n/a
 -----------------------------------------------------------------------
+administratorhas logged in at08:28:41
+-----------------------------------------------------------------------
+productionhas logged in at08:29:49
+-----------------------------------------------------------------------

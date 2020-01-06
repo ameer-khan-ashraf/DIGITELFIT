@@ -1,0 +1,12 @@
+production created sales order at 10:41:11
+Values Orderno: EA-SO-19-809 date placed: 2019/12/31 date due 2020-01-02 Priority medium
+-----------------------------------------------------------------------
+production downloaded sales order copy at 10:41:24
+Orderno: EA-SO-19-809 date placed: 2019-12-31 date due 2020-01-02 Priority: medium Status: NOT STARTED Progress: 0%
+-----------------------------------------------------------------------
+ downloaded sales order copy at 11:09:36
+Orderno: EA-SO19-1107 date placed: 2019-12-29 date due 2019-12-31 Priority: medium Status: STARTED Progress: 40%
+-----------------------------------------------------------------------
+administrator created sales order at 11:15:04
+Values Orderno: 121 date placed: 2019/12/31 date due 2020-01-04 Priority medium
+-----------------------------------------------------------------------

@@ -217,7 +217,7 @@
                     <th scope="col">Machine Type</th>
                     <th scope="col">Ton</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Client</th>
+                    
                     <th scope="col">Remarks</th>
                     </tr>
                 </thead>
@@ -233,7 +233,7 @@
                     <td><?php echo $row['MachType'];?></td>
                     <td><?php echo $row['ton'];?></td>
                     <td><?php echo $row['status'];?></td>
-                    <td><?php echo $row['Client'];?></td>
+                    
                     <td><?php echo $row['Remarks'];?></td>
                     </tr>
                     <?php
@@ -293,8 +293,7 @@
                     <th scope="col">S.No</th>
                     <th scope="col">Machine Type</th>
                     <th scope="col">Ton</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Client</th>
+                    <th scope="col">Status</th>                    
                     <th scope="col">Remarks</th>
                     </tr>
                 </thead>
@@ -310,7 +309,6 @@
                     <td><?php echo $row['MachType'];?></td>
                     <td><?php echo $row['ton'];?></td>
                     <td><?php echo $row['status'];?></td>
-                    <td><?php echo $row['Client'];?></td>
                     <td><?php echo $row['Remarks'];?></td>
                     </tr>
                     <?php
@@ -429,9 +427,6 @@
             <div class="card shadow mb-4">
         <div class="card-header bg-gradient-danger py-3">   
             <h6 class="m-2 font-weight-bold text-light">
-            <button type="button" class="btn btn-warning text-dark" data-toggle="modal" data-target="#imrmodal">
-            Create New Request
-            </button>  
               International Material Request</h6>
         </div>
         <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:50vh;">

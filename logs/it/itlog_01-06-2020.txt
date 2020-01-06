@@ -1,0 +1,20 @@
+ituserhas logged in at12:32:17
+-----------------------------------------------------------------------
+ituser created a new user qcuser at 12:35:02
+Values username= qcuser email= qc@elfitarabia.com department= purchase
+-----------------------------------------------------------------------
+ituserhas logged out at12:35:09
+-----------------------------------------------------------------------
+ituserhas logged in at08:33:13
+-----------------------------------------------------------------------
+ituser Updated user qcuser at 08:34:03
+Changed Values username= qcuser email= qc@elfitarabia.com department= purchase
+-----------------------------------------------------------------------
+ituser Updated user qcuser at 08:34:18
+Changed Values username= qcuser email= qc@elfitarabia.com department= purchase
+-----------------------------------------------------------------------
+ituser Updated user qcuser at 08:34:39
+Changed Values username= qcuser email= qc@elfitarabia.com department= QC
+-----------------------------------------------------------------------
+ituserhas logged out at08:34:46
+-----------------------------------------------------------------------

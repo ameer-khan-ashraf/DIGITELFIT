@@ -43,6 +43,7 @@
                 <option value="production">Production</option>
                 <option value="IT">IT</option>
                 <option value="purchase">Purchase</option>
+                <option value="QC">QC</option>
             </select>
         </div>
         <div class="form-group">

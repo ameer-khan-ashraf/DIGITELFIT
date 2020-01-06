@@ -4,8 +4,7 @@ include('access.php');
 if(isset($_POST['update-trail']))
 {
     $id = $_GET['id'];
-    $status = $_POST['status'];
-    $client = $_POST['client'];
+    $status = $_POST['status']; 
     $remarks = $_POST['remark'];
     $filename='productionlog_'.date('m-d-Y').'.txt';
     $filepath="../../logs/production/$filename";
@@ -15,27 +14,8 @@ if(isset($_POST['update-trail']))
     $row = mysqli_fetch_assoc($query_run0);
     $mtype = $row['MachType'];
     $load=$row['ton'];
-    if (empty($remarks) && empty($status)){
-        $query= "UPDATE trailrent SET client=? WHERE mID='$id'";
-        $query_run = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($query_run,$query))
-            {
-                printf("Error: %s\n", mysqli_error($conn));
-            }
-        else
-            {
-                mysqli_stmt_bind_param($query_run, "s" ,$client);
-                mysqli_stmt_execute($query_run);
-                $log= $_SESSION['username'].' updated rental trailer client at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Client: '.$client.PHP_EOL.
-                '-----------------------------------------------------------------------'.PHP_EOL;
-                fwrite($myfile, $log);
-                $_SESSION['success'] = "Client is Updated";
-                header('location: ../rental.php');
-                exit();
-            }
-    }
-    elseif (empty($client) && empty($status)){
+    
+    if (empty($status)){
         $query= "UPDATE trailrent SET remarks=? WHERE mID='$id'";
         $query_run = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($query_run,$query))
@@ -46,16 +26,17 @@ if(isset($_POST['update-trail']))
             {
                 mysqli_stmt_bind_param($query_run, "s" ,$remarks);
                 mysqli_stmt_execute($query_run);
-                $log= $_SESSION['username'].' updated rental trailer remarks at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Remarks: '.$remarks.PHP_EOL.
+                $log= $_SESSION['username'].' updated rental trailer client at '.date("h:i:s").PHP_EOL.
+                'Machine type: '.$mtype.' Load Capacity: '.$load.PHP_EOL.
                 '-----------------------------------------------------------------------'.PHP_EOL;
                 fwrite($myfile, $log);
-                $_SESSION['success'] = "Remarks is Updated";
+                $_SESSION['success'] = "Remarks and Client is Updated";
                 header('location: ../rental.php');
                 exit();
             }
     }
-    elseif (empty($client) && empty($remarks)){
+
+    elseif (empty($remarks)){
         $query= "UPDATE trailrent SET status=? WHERE mID='$id'";
         $query_run = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($query_run,$query))
@@ -66,49 +47,8 @@ if(isset($_POST['update-trail']))
             {
                 mysqli_stmt_bind_param($query_run, "s" ,$status);
                 mysqli_stmt_execute($query_run);
-                $log= $_SESSION['username'].' updated rental trailer status at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Status: '.$status.PHP_EOL.
-                '-----------------------------------------------------------------------'.PHP_EOL;
-                fwrite($myfile, $log);
-                $_SESSION['success'] = "status is Updated";
-                header('location: ../rental.php');
-                exit();
-            }
-    }
-    elseif (empty($status)){
-        $query= "UPDATE trailrent SET remarks=?,client=? WHERE mID='$id'";
-        $query_run = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($query_run,$query))
-            {
-                printf("Error: %s\n", mysqli_error($conn));
-            }
-        else
-            {
-                mysqli_stmt_bind_param($query_run, "ss" ,$remarks,$client);
-                mysqli_stmt_execute($query_run);
-                $log= $_SESSION['username'].' updated rental trailer client at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Client: '.$client.PHP_EOL.
-                '-----------------------------------------------------------------------'.PHP_EOL;
-                fwrite($myfile, $log);
-                $_SESSION['success'] = "Remarks and Client is Updated";
-                header('location: ../rental.php');
-                exit();
-            }
-    }
-
-    elseif (empty($remarks)){
-        $query= "UPDATE trailrent SET status=?,client=? WHERE mID='$id'";
-        $query_run = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($query_run,$query))
-            {
-                printf("Error: %s\n", mysqli_error($conn));
-            }
-        else
-            {
-                mysqli_stmt_bind_param($query_run, "ss" ,$status,$client);
-                mysqli_stmt_execute($query_run);
                 $log= $_SESSION['username'].' updated rental trailer status and client at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Client: '.$client.' Status: '.$status.PHP_EOL.
+                'Machine type: '.$mtype.' Load Capacity: '.$load.' Status: '.$status.PHP_EOL.
                 '-----------------------------------------------------------------------'.PHP_EOL;
                 fwrite($myfile, $log);
                 $_SESSION['success'] = "status and Client is Updated";
@@ -116,7 +56,7 @@ if(isset($_POST['update-trail']))
                 exit();
             }
     }
-    elseif (empty($client)){
+    else{
         $query= "UPDATE trailrent SET remarks=?,status=? WHERE mID='$id'";
         $query_run = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($query_run,$query))
@@ -125,30 +65,10 @@ if(isset($_POST['update-trail']))
             }
         else
             {
-                mysqli_stmt_bind_param($query_run, "ss" ,$remarks,$status);
-                mysqli_stmt_execute($query_run);
-                $log= $_SESSION['username'].' updated rental trailer status and remarks at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Remarks: '.$remarks.' Status: '.$status.PHP_EOL.
-                '-----------------------------------------------------------------------'.PHP_EOL;
-                fwrite($myfile, $log);
-                $_SESSION['success'] = "status and remarks is Updated";
-                header('location: ../rental.php');
-                exit();
-            }
-    }
-    else{
-        $query= "UPDATE trailrent SET client=?,remarks=?,status=? WHERE mID='$id'";
-        $query_run = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($query_run,$query))
-            {
-                printf("Error: %s\n", mysqli_error($conn));
-            }
-        else
-            {
-                mysqli_stmt_bind_param($query_run, "sss" ,$client,$remarks,$status);
+                mysqli_stmt_bind_param($query_run, "sss" ,$remarks,$status);
                 mysqli_stmt_execute($query_run);
                 $log= $_SESSION['username'].' updated rental trailer info at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Remarks: '.$remarks.' Status: '.$status.' Client: '.$client.PHP_EOL.
+                'Machine type: '.$mtype.' Load Capacity: '.$load.' Remarks: '.$remarks.' Status: '.$status.PHP_EOL.
                 '-----------------------------------------------------------------------'.PHP_EOL;
                 fwrite($myfile, $log);
                 $_SESSION['success'] = "Info Updated";
@@ -161,7 +81,7 @@ elseif(isset($_POST['update-winch']))
 {
     $id = $_GET['id'];
     $status = $_POST['status'];
-    $client = $_POST['client'];
+    
     $remarks = $_POST['remark'];
     $filename='productionlog_'.date('m-d-Y').'.txt';
     $filepath="../../logs/production/$filename";
@@ -171,27 +91,8 @@ elseif(isset($_POST['update-winch']))
     $row = mysqli_fetch_assoc($query_run0);
     $mtype = $row['MachType'];
     $load=$row['ton'];
-    if (empty($remarks) && empty($status)){
-        $query= "UPDATE winchrent SET client=? WHERE mID='$id'";
-        $query_run = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($query_run,$query))
-            {
-                printf("Error: %s\n", mysqli_error($conn));
-            }
-        else
-            {
-                mysqli_stmt_bind_param($query_run, "s" ,$client);
-                mysqli_stmt_execute($query_run);
-                $log= $_SESSION['username'].' updated rental winch client at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Client: '.$client.PHP_EOL.
-                '-----------------------------------------------------------------------'.PHP_EOL;
-                fwrite($myfile, $log);
-                $_SESSION['success'] = "Client is Updated";
-                header('location: ../rental.php');
-                exit();
-            }
-    }
-    elseif (empty($client) && empty($status)){
+    
+    if (empty($status)){
         $query= "UPDATE winchrent SET remarks=? WHERE mID='$id'";
         $query_run = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($query_run,$query))
@@ -202,16 +103,16 @@ elseif(isset($_POST['update-winch']))
             {
                 mysqli_stmt_bind_param($query_run, "s" ,$remarks);
                 mysqli_stmt_execute($query_run);
-                $log= $_SESSION['username'].' updated rental winch remarks at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Remarks: '.$remarks.PHP_EOL.
+                $log= $_SESSION['username'].' updated rental winch client at '.date("h:i:s").PHP_EOL.
+                'Machine type: '.$mtype.' Load Capacity: '.$load.PHP_EOL.
                 '-----------------------------------------------------------------------'.PHP_EOL;
                 fwrite($myfile, $log);
-                $_SESSION['success'] = "Remarks is Updated";
+                $_SESSION['success'] = "Remarks and Client is Updated";
                 header('location: ../rental.php');
                 exit();
             }
     }
-    elseif (empty($client) && empty($remarks)){
+    elseif (empty($remarks)){
         $query= "UPDATE winchrent SET status=? WHERE mID='$id'";
         $query_run = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($query_run,$query))
@@ -222,48 +123,8 @@ elseif(isset($_POST['update-winch']))
             {
                 mysqli_stmt_bind_param($query_run, "s" ,$status);
                 mysqli_stmt_execute($query_run);
-                $log= $_SESSION['username'].' updated rental winch status at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Status: '.$status.PHP_EOL.
-                '-----------------------------------------------------------------------'.PHP_EOL;
-                fwrite($myfile, $log);
-                $_SESSION['success'] = "status is Updated";
-                header('location: ../rental.php');
-                exit();
-            }
-    }
-    elseif (empty($status)){
-        $query= "UPDATE winchrent SET remarks=?,client=? WHERE mID='$id'";
-        $query_run = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($query_run,$query))
-            {
-                printf("Error: %s\n", mysqli_error($conn));
-            }
-        else
-            {
-                mysqli_stmt_bind_param($query_run, "ss" ,$remarks,$client);
-                mysqli_stmt_execute($query_run);
-                $log= $_SESSION['username'].' updated rental winch client at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Client: '.$client.PHP_EOL.
-                '-----------------------------------------------------------------------'.PHP_EOL;
-                fwrite($myfile, $log);
-                $_SESSION['success'] = "Remarks and Client is Updated";
-                header('location: ../rental.php');
-                exit();
-            }
-    }
-    elseif (empty($remarks)){
-        $query= "UPDATE winchrent SET status=?,client=? WHERE mID='$id'";
-        $query_run = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($query_run,$query))
-            {
-                printf("Error: %s\n", mysqli_error($conn));
-            }
-        else
-            {
-                mysqli_stmt_bind_param($query_run, "ss" ,$status,$client);
-                mysqli_stmt_execute($query_run);
                 $log= $_SESSION['username'].' updated rental winch status and client at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Client: '.$client.' Status: '.$status.PHP_EOL.
+                'Machine type: '.$mtype.' Load Capacity: '.$load.' Status: '.$status.PHP_EOL.
                 '-----------------------------------------------------------------------'.PHP_EOL;
                 fwrite($myfile, $log);
                 $_SESSION['success'] = "status and Client is Updated";
@@ -272,7 +133,7 @@ elseif(isset($_POST['update-winch']))
             }
     }
     elseif (empty($client)){
-        $query= "UPDATE winchrent SET remarks=?,client=? WHERE mID='$id'";
+        $query= "UPDATE winchrent SET remarks=? WHERE mID='$id'";
         $query_run = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($query_run,$query))
             {
@@ -280,7 +141,7 @@ elseif(isset($_POST['update-winch']))
             }
         else
             {
-                mysqli_stmt_bind_param($query_run, "ss" ,$remarks,$client);
+                mysqli_stmt_bind_param($query_run, "ss" ,$remarks);
                 mysqli_stmt_execute($query_run);
                 $log= $_SESSION['username'].' updated rental winch status and remarks at '.date("h:i:s").PHP_EOL.
                 'Machine type: '.$mtype.' Load Capacity: '.$load.' Remarks: '.$remarks.' Status: '.$status.PHP_EOL.
@@ -292,7 +153,7 @@ elseif(isset($_POST['update-winch']))
             }
     }
     else{
-        $query= "UPDATE winchrent SET client=?,remarks=?,status=? WHERE mID='$id'";
+        $query= "UPDATE winchrent SET remarks=?,status=? WHERE mID='$id'";
         $query_run = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($query_run,$query))
             {
@@ -300,10 +161,10 @@ elseif(isset($_POST['update-winch']))
             }
         else
             {
-                mysqli_stmt_bind_param($query_run, "sss" ,$client,$remarks,$status);
+                mysqli_stmt_bind_param($query_run, "ss" ,$remarks,$status);
                 mysqli_stmt_execute($query_run);
                 $log= $_SESSION['username'].' updated rental winch info at '.date("h:i:s").PHP_EOL.
-                'Machine type: '.$mtype.' Load Capacity: '.$load.' Remarks: '.$remarks.' Status: '.$status.' Client: '.$client.PHP_EOL.
+                'Machine type: '.$mtype.' Load Capacity: '.$load.' Remarks: '.$remarks.' Status: '.$status.PHP_EOL.
                 '-----------------------------------------------------------------------'.PHP_EOL;
                 fwrite($myfile, $log);
                 $_SESSION['success'] = "Info Updated";

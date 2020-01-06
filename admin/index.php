@@ -225,7 +225,7 @@
                     <th scope="col">Machine Type</th>
                     <th scope="col">Ton</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Client</th>
+                    
                     <th scope="col">Remarks</th>
                     </tr>
                 </thead>
@@ -241,7 +241,7 @@
                     <td><?php echo $row['MachType'];?></td>
                     <td><?php echo $row['ton'];?></td>
                     <td><?php echo $row['status'];?></td>
-                    <td><?php echo $row['Client'];?></td>
+                    
                     <td><?php echo $row['Remarks'];?></td>
                     </tr>
                     <?php
@@ -302,7 +302,7 @@
                     <th scope="col">Machine Type</th>
                     <th scope="col">Ton</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Client</th>
+                    
                     <th scope="col">Remarks</th>
                     </tr>
                 </thead>
@@ -318,7 +318,7 @@
                     <td><?php echo $row['MachType'];?></td>
                     <td><?php echo $row['ton'];?></td>
                     <td><?php echo $row['status'];?></td>
-                    <td><?php echo $row['Client'];?></td>
+                    
                     <td><?php echo $row['Remarks'];?></td>
                     </tr>
                     <?php

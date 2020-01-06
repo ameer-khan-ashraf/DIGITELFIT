@@ -1,0 +1,15 @@
+production updated sales order progress & status at 10:44:25
+Values Orderno:  date placed:  date due  Priority  Status STARTED Progress 40%
+-----------------------------------------------------------------------
+production updated rental trailer status at 10:45:14
+Machine type:  Load Capacity:  Status: Available
+-----------------------------------------------------------------------
+production updated rental trailer status at 10:45:31
+Machine type:  Load Capacity:  Status: Repair
+-----------------------------------------------------------------------
+production updated rental trailer status at 10:45:39
+Machine type:  Load Capacity:  Status: Site
+-----------------------------------------------------------------------
+administrator updated sales order progress & status at 11:17:11
+Values Orderno:  date placed:  date due  Priority  Status STARTED Progress 30%
+-----------------------------------------------------------------------

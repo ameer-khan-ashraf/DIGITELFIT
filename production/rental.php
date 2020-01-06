@@ -70,7 +70,7 @@
                     <th scope="col">Machine Type</th>
                     <th scope="col">Ton</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Client</th>
+                    
                     <th scope="col">Remarks</th>
                     </tr>
                 </thead>
@@ -95,11 +95,6 @@
                                 <option value="Available">Available</option>
                             </select>
                         </div>
-                    </td>
-                    <td>
-                    <div class="form-group">
-                        <input type="text" name="client" class="form-control" placeholder="<?php echo $row['Client']; ?>">
-                    </div>
                     </td>
                     <td>
                     <div class="form-group">
@@ -182,7 +177,7 @@
                     <th scope="col">Machine Type</th>
                     <th scope="col">Ton</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Client</th>
+                    
                     <th scope="col">Remarks</th>
                     </tr>
                 </thead>
@@ -207,11 +202,6 @@
                                 <option value="Available">Available</option>
                             </select>
                         </div>
-                    </td>
-                    <td>
-                    <div class="form-group">
-                        <input type="text" name="client" class="form-control" placeholder="<?php echo $row1['Client']; ?>">
-                    </div>
                     </td>
                     <td>
                     <div class="form-group">

@@ -153,7 +153,9 @@
                     <th scope="col">Avl Qty</th>
                     <th scope="col">Pur Qty</th>
                     <th scope="col">Purpose</th>
+                    <th style="min-width:160px;" scope="col">QC status</th>
                     <th style="min-width:160px;" scope="col">Remarks</th>
+                    <th style="min-width:160px;" scope="col">PO Status</th>
                     
                     </tr>
                 </thead>
@@ -179,7 +181,22 @@
                     <td><?php echo $row['aqty'];?></td>
                     <td><?php echo $row['pqty'];?></td>
                     <td><?php echo $row['purpose'];?></td>
+                    <td><?php echo $row['qcstatus'];?></td>
                     <td><?php echo $row['remarks'];?></td>
+                    <form action="includes/materialrequpdate.inc.php?id=<?php echo $row['id'];?>" method="POST">
+                    <td>
+                        <div class="form-group">
+                            <select name="pstatus" class="form-control">
+                                <option value="" disabled selected hidden><?php echo $row['qcstatus'];?></option>
+                                <option value="Approved">Approved</option>
+                                <option value="Rejected">Rejected</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                    <button type="submit" name="update-mr" class="btn btn-primary">Update</button>
+                    </td>
+                    </form>
                     </tr>
                     <?php
 
@@ -236,6 +253,7 @@
                     <th scope="col">Avl Qty</th>
                     <th scope="col">Pur Qty</th>
                     <th scope="col">Purpose</th>
+                    <th style="min-width:160px;" scope="col">QC Status</th>
                     <th style="min-width:160px;" scope="col">Remarks</th>
                     <th style="min-width:160px;" scope="col">Expected date</th>
                     </tr>
@@ -261,6 +279,7 @@
                     <td><?php echo $row['aqty'];?></td>
                     <td><?php echo $row['pqty'];?></td>
                     <td><?php echo $row['purpose'];?></td>
+                    <td><?php echo $row['qcstatus'];?></td>
                     <td><?php echo $row['remarks'];?></td>
                     <form action="includes/materialrequpdate.inc.php?id=<?php echo $row['id'];?>" method="POST">
                     <td>

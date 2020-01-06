@@ -1,0 +1,13 @@
+productionhas logged in at12:17:47
+-----------------------------------------------------------------------
+production updated rental trailer status and client at 12:18:23
+Machine type:  Load Capacity:  Status: Repair
+-----------------------------------------------------------------------
+production updated rental trailer status and client at 12:18:32
+Machine type:  Load Capacity:  Status: Repair
+-----------------------------------------------------------------------
+production updated rental trailer client at 12:20:34
+Machine type:  Load Capacity: 
+-----------------------------------------------------------------------
+productionhas logged out at12:32:00
+-----------------------------------------------------------------------

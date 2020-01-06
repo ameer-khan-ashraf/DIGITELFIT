@@ -18,7 +18,7 @@
         $filepath="../../logs/production/$filename";
         $myfile=fopen($filepath,'a');
         $log= $_SESSION['username'].' deleted rental trailer equipment at '.date("h:i:s").PHP_EOL.
-        'Values ID: '.$id.' Machine type: '.$mtype.' Load: '.$ton.' Status: '.$status.' Client: '.$client.' Remarks '.$remarks.'%'.PHP_EOL.
+        'Values ID: '.$id.' Machine type: '.$mtype.' Load: '.$ton.' Status: '.$status.' Remarks '.$remarks.'%'.PHP_EOL.
         '-----------------------------------------------------------------------'.PHP_EOL;
         fwrite($myfile, $log);
         $_SESSION['success'] = "Trailer Equipment deleted";
@@ -47,7 +47,7 @@
         $filepath="../../logs/production/$filename";
         $myfile=fopen($filepath,'a');
         $log= $_SESSION['username'].' deleted rental winch equipment at '.date("h:i:s").PHP_EOL.
-        'Values ID: '.$id.' Machine type: '.$mtype.' Load: '.$ton.' Status: '.$status.' Client: '.$client.' Remarks '.$remarks.'%'.PHP_EOL.
+        'Values ID: '.$id.' Machine type: '.$mtype.' Load: '.$ton.' Status: '.$status.' Remarks '.$remarks.'%'.PHP_EOL.
         '-----------------------------------------------------------------------'.PHP_EOL;
         fwrite($myfile, $log);
         $_SESSION['success'] = "Winch Equipment deleted";

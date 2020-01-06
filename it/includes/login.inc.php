@@ -97,6 +97,18 @@ if(isset ($_POST['login_submit'])) {
                     header('Location: ../../purchase/index.php');
                     exit();
                     }
+                    elseif ($row['deptname']=="QC")
+                    {
+                    $_SESSION['username'] = $user_login;
+                    $filename='QClog_'.date('m-d-Y').'.txt';
+                    $filepath="../../logs/QC/$filename";
+                    $myfile=fopen($filepath,'a');
+                    $log= $_SESSION['username'].'has logged in at'.date("h:i:s").PHP_EOL.
+                    '-----------------------------------------------------------------------'.PHP_EOL;
+                    fwrite($myfile, $log);
+                    header('Location: ../../QC/index.php');
+                    exit();
+                    }
                 }
                 else{
                     $_SESSION['status'] = 'Email id / Password is Invalid';

@@ -1,0 +1,3 @@
+production created local material request at 10:48:18
+Department: maintenanceUpload date: 2020-01-01 date due 2020-01-09 Product code PL 0352 A Product description Pin for DTP receptacle 14-12 AWG Product Remarks N/A
+-----------------------------------------------------------------------

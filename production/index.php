@@ -207,7 +207,6 @@
                     <th scope="col">Machine Type</th>
                     <th scope="col">Ton</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Client</th>
                     <th scope="col">Remarks</th>
                     </tr>
                 </thead>
@@ -223,7 +222,6 @@
                     <td><?php echo $row['MachType'];?></td>
                     <td><?php echo $row['ton'];?></td>
                     <td><?php echo $row['status'];?></td>
-                    <td><?php echo $row['Client'];?></td>
                     <td><?php echo $row['Remarks'];?></td>
                     </tr>
                     <?php
@@ -282,7 +280,7 @@
                     <th scope="col">Machine Type</th>
                     <th scope="col">Ton</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Client</th>
+                    
                     <th scope="col">Remarks</th>
                     </tr>
                 </thead>
@@ -298,7 +296,7 @@
                     <td><?php echo $row['MachType'];?></td>
                     <td><?php echo $row['ton'];?></td>
                     <td><?php echo $row['status'];?></td>
-                    <td><?php echo $row['Client'];?></td>
+                    
                     <td><?php echo $row['Remarks'];?></td>
                     </tr>
                     <?php
@@ -326,6 +324,148 @@
               </div>
             </div>  
   </div>
+
+
+
+  <div class="row">
+            <div class="col-xl-12 col-md-12 mb-4">
+            <div class="card shadow mb-4">
+        <div class="card-header bg-gradient-success py-3"> 
+            <h6 class="m-2 font-weight-bold text-light"> 
+            Material Out</h6>
+        </div>
+        <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:40vh;">
+            <?php
+            if(isset($_SESSION['success']) && $_SESSION['success'] !='')
+            {
+                echo '<h2>'.$_SESSION['success'].'</h2>';
+                unset($_SESSION['success']);
+            }
+            if (isset($_SESSION['status']) && $_SESSION['status'] !='') 
+            {
+                echo '<h2 class="bg-info">'.$_SESSION['status'].'</h2>';
+                unset($_SESSION['status']);
+            }
+            ?>
+            <?php
+            $query = "SELECT * FROM materialin";
+            $query_run = mysqli_query($conn,$query)
+            ?>
+            <table class="table table-bordered table-striped ">
+                <thead>
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Material</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Third Party</th>
+                    <th scope="col">Dispatch Date</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Expected Return Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if(mysqli_num_rows($query_run) > 0)
+                    {
+                        while($row = mysqli_fetch_assoc($query_run))
+                        {
+                            ?>
+                    <tr>
+                    <td><?php echo $row['id'];?></td>
+                    <td><?php echo $row['material'];?></td>
+                    <td><?php echo $row['qty'];?></td>
+                    <td><?php echo $row['thirdpty'];?></td>
+                    <td><?php echo $row['dispdate'];?></td>
+                    <td><?php echo $row['mstatus'];?></td>
+                    <td><?php echo $row['edate'];?></td>
+                    
+                    </tr>
+                    <?php
+
+                        }
+                    }
+                    else {
+                        echo "No Record Found";
+                        }
+                    ?>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+            </div>  
+            </div>
+    
+            <div class="row">
+            <div class="col-xl-12 col-md-12 mb-4">
+            <div class="card shadow mb-4">
+        <div class="card-header bg-gradient-success py-3"> 
+            <h6 class="m-2 font-weight-bold text-light"> 
+            Material Out</h6>
+        </div>
+        <div class="card-body table-wrapper-scroll-y my-custom-scrollbar" style="height:40vh;">
+            <?php
+            if(isset($_SESSION['success']) && $_SESSION['success'] !='')
+            {
+                echo '<h2>'.$_SESSION['success'].'</h2>';
+                unset($_SESSION['success']);
+            }
+            if (isset($_SESSION['status']) && $_SESSION['status'] !='') 
+            {
+                echo '<h2 class="bg-info">'.$_SESSION['status'].'</h2>';
+                unset($_SESSION['status']);
+            }
+            ?>
+            <?php
+            $query = "SELECT * FROM materialout";
+            $query_run = mysqli_query($conn,$query)
+            ?>
+            <table class="table table-bordered table-striped ">
+                <thead>
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Material</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Third Party</th>
+                    <th scope="col">Material Status</th>
+                    <th scope="col">Material Handed to Production</th>
+                    <th scope="col">Task</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if(mysqli_num_rows($query_run) > 0)
+                    {
+                        while($row = mysqli_fetch_assoc($query_run))
+                        {
+                            ?>
+                    <tr>
+                    <td><?php echo $row['id'];?></td>
+                    <td><?php echo $row['material'];?></td>
+                    <td><?php echo $row['qty'];?></td>
+                    <td><?php echo $row['thirdpty'];?></td>
+                    <td><?php echo $row['dispdate'];?></td>
+                    <td><?php echo $row['mstatus'];?></td>
+                    <td><?php echo $row['edate'];?></td>
+                    
+                    </tr>
+                    <?php
+
+                        }
+                    }
+                    else {
+                        echo "No Record Found";
+                        }
+                    ?>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+            </div>  
+            </div>
+
+
   <div class="row">
             <div class="col-xl-12 col-md-12 mb-4">
             <div class="card shadow mb-4">
@@ -494,6 +634,7 @@
     </div>
             </div>  
   </div>
+  
 </div>
 <!-- /.container-fluid -->
 
